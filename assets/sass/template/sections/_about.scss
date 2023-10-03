@@ -1,0 +1,911 @@
+/* About 1 ---------------------------------- */
+.img-box1 {
+    position: relative;
+
+    .img1 {
+        img {
+            width: 690px;
+            height: 585px;
+
+            @include sm {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .about-counter-wrapper {
+        position: relative;
+        background-color: $theme-color;
+        min-width: 210px;
+        width: 210px;
+        height: 210px;
+        border-radius: 50%;
+        padding: 10px;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 20%;
+        top: 20%;
+
+        &:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $theme-color;
+            border-radius: 50%;
+            clip-path: path("M0.882406 101.83C1.00686 64.7002 25.2344 29.9768 59.0452 15.042C93.8101 -0.30767 135.296 6.78636 163.381 32.1755C176.947 44.4553 186.779 60.5517 191.675 78.1416C192.919 82.6635 193.832 87.3099 194.413 91.9563C194.703 94.4039 194.91 96.8516 195.035 99.2992C195.076 99.88 195.076 100.461 195.118 101.042C195.201 104.112 195.201 97.9302 195.118 101C195.076 102.369 194.993 103.697 194.91 105.066C194.247 114.566 192.131 123.983 188.729 132.861C175.412 167.75 142.099 192.144 104.97 194.882C102.647 195.048 100.323 195.131 98.0002 195.131C97.9587 195.131 97.9587 201.229 98.0002 201.229C116.752 201.188 135.13 195.753 150.894 185.589C166.161 175.716 178.399 161.486 186.116 145.058C194.081 128.049 196.321 109.048 194.869 90.4628C193.375 71.9187 186.655 54.1629 175.454 39.3111C152.637 9.06807 113.308 -4.99554 76.4277 3.26009C40.1278 11.3913 11.2123 40.8045 3.12262 76.98C1.42172 84.6548 0.840921 92.4126 0.799436 100.253C0.799436 101.498 0.757946 102.743 0.840918 104.029C0.840918 103.821 0.84092 102.286 0.882406 101.83Z");
+        }
+    }
+
+    .about-counter {
+        text-align: center;
+
+        .counter-number {
+            font-family: $title-font;
+            font-weight: 700;
+            font-size: 45px;
+            line-height: 55px;
+            color: $white-color;
+            margin-bottom: 10px;
+
+        }
+
+        .counter-text {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 26px;
+            text-align: center;
+            color: $white-color;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.img-box4 {
+    position: relative;
+
+    @include xl {
+        padding-right: 40px;
+    }
+
+    .img4 {
+        @include xl {
+            margin-bottom: 40px;
+        }
+
+    }
+
+    .img5 {
+        position: absolute;
+        left: 15px;
+        top: 50px;
+
+        .about3-dot {
+            z-index: -1;
+        }
+    }
+
+    .about-counter {
+        background-color: $theme-color;
+        padding: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        position: absolute;
+        left: 50px;
+        top: 36%;
+
+        @include sm {
+            padding: 30px;
+            left: 0;
+        }
+
+        @include xs {
+            padding: 25px;
+        }
+    }
+
+    .counter-card {
+        &_number {
+            font-family: $title-font;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 70px;
+            margin-bottom: 0;
+
+            @include sm {
+                font-size: 40px;
+                line-height: 50px;
+            }
+
+            @include xs {
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+
+        &_text {
+            font-family: $title-font;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 0;
+            max-width: 142px;
+
+            @include xs {
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+    }
+
+}
+
+.achive-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    margin-top: 28px;
+    margin-bottom: 20px;
+
+    @include sm {
+        display: block;
+    }
+
+
+    .achive-about-wrap {
+        margin-bottom: 20px;
+
+        .achive-about {
+            max-width: 336px;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+
+        }
+    }
+}
+
+.about-wrap {
+    .about-content {
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        margin-top: 27px;
+
+        .about_title {
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 14px;
+        }
+
+        .about_text {
+            max-width: 410px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.about-profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+
+    .title {
+        margin-bottom: 5px;
+        line-height: 30px;
+    }
+
+    .desig {
+        font-family: $title-font;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 0;
+    }
+
+    &.style2 {
+        gap: 30px;
+
+        @include xs {
+            gap: 10px;
+        }
+
+        .avater {
+            min-width: 70px;
+
+            img {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+.about-avater {
+    min-width: 60px;
+
+    img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+}
+
+.about-counter1 {
+    background-color: $smoke-color2;
+    padding: 80px 40px 40px 40px;
+    max-width: 164px;
+    min-height: 211px;
+    position: absolute;
+    bottom: 0;
+    right: -20px;
+
+    @media(max-width: 1399px) {
+        right: 0;
+    }
+
+    @include sm {
+        position: relative;
+        max-width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    @media(max-width: 640px) {
+        right: 0;
+    }
+
+
+    @include xs {
+        padding: 40px;
+        min-width: 100%;
+        gap: 20px;
+    }
+
+    .counter-title {
+        color: $white-color;
+        font-size: 40px;
+        line-height: 60px;
+        margin-top: -10px;
+    }
+
+    .counter-text {
+        text-align: left;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        color: $white-color;
+    }
+
+    .counter-shape {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.counter-title {
+    font-family: $title-font;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 70px;
+    color: $white-color;
+    margin-bottom: 0;
+
+    @include xs {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+.counter-text {
+    font-family: $title-font;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: $white-color;
+    max-width: 128px;
+    text-align: center;
+
+    @include xs {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+.img-box3 {
+    position: relative;
+
+    @include lg {
+        margin-bottom: 40px;
+    }
+
+    @include xs {
+        text-align: center;
+    }
+
+    .img1 {
+        text-align: right;
+
+        @include lg {
+            text-align: center;
+        }
+    }
+
+    .img3 {
+        position: absolute;
+        top: 17%;
+        right: 15%;
+
+        img {
+            border: 10px solid $white-color;
+        }
+
+        @include lg {
+            right: 25%;
+        }
+
+        @include md {
+            right: 0;
+        }
+
+        @include xs {
+            display: none;
+        }
+    }
+
+    .about-counter {
+        background-color: $theme-color;
+        padding: 45px;
+        max-width: 250px;
+        min-height: 283px;
+        position: absolute;
+        left: 0;
+        bottom: 40px;
+
+        @include lg {
+            left: 40px;
+        }
+
+        @include sm {
+            left: -30px;
+            padding: 35px;
+        }
+
+        @include xs {
+            left: 0;
+            max-width: 200px;
+            min-height: 220px;
+        }
+
+        @include vxs {
+            display: none;
+        }
+
+        .counter-title {
+            font-weight: 800;
+            font-size: 80px;
+            line-height: 70px;
+            margin-bottom: 20px;
+
+            @include sm {
+                font-size: 50px;
+                line-height: 60px;
+                margin-bottom: 0;
+            }
+        }
+
+        .counter-text {
+            font-family: $body-font;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 32px;
+            max-width: 152px;
+            text-align: left;
+
+            @include sm {
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+    }
+
+    .line-animation {
+        position: absolute;
+        left: 45px;
+        top: auto;
+        bottom: 40px;
+
+        img {
+            max-width: none;
+        }
+    }
+
+    .vehicle-repair {
+        background-color: $white-color;
+        padding: 20px;
+        min-width: 270px;
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.08);
+
+        @include sm {
+            left: -30px;
+            top: 20px;
+        }
+
+        @include xs {
+            left: -20px;
+            top: 20px;
+        }
+
+        @media(max-width: 400px) {
+            display: none;
+        }
+    }
+
+    .about-shape {
+        position: absolute;
+        right: 16%;
+        top: 20px;
+        z-index: -2;
+
+        @media(max-width: 1399px) {
+            right: 10%;
+        }
+
+        @include lg {
+            right: 25%;
+        }
+
+        @include md {
+            right: 0;
+        }
+
+        @include xs {
+            display: none;
+        }
+    }
+
+    .about-line {
+        position: absolute;
+        bottom: 0;
+        right: 19%;
+        z-index: -1;
+
+        @include lg {
+            right: 30%;
+        }
+
+        @include md {
+            right: 0;
+        }
+
+        @include xs {
+            display: none;
+        }
+    }
+
+    &.style2 {
+        @include lg {
+            margin-bottom: 30px;
+        }
+    }
+
+}
+
+.about-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include lg {
+        justify-content: flex-start;
+        gap: 50px;
+    }
+
+    @include sm {
+        gap: 30px;
+    }
+
+    @include xs {
+        gap: 20px;
+    }
+
+    @media(max-width: 440px) {
+        display: block;
+        max-width: 220px;
+    }
+
+    .about-content {
+        @include xs {
+            margin-bottom: 30px;
+
+            .th-btn {
+                padding: 17px 28px; 
+            }
+        }
+
+        .header-info {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 15px;
+            border-top: 1px solid $gray-color;
+            padding-top: 30px;
+            margin-top: 35px; 
+            margin-bottom: 30px;
+
+            &_label {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 24px;
+                color: #787878;
+            }
+
+            &_link {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 28px;
+                color: $title-color;
+                margin-bottom: 0;
+
+                @include xs {
+                    font-size: 16px;
+                    line-height: 26px;
+                }
+
+                &:hover {
+                    color: $theme-color;
+                }
+
+                a {
+                    color: inherit;
+                }
+            }
+        }
+    }
+
+    .counter-wrapper {
+        background-color: $smoke-color2;
+        padding: 40px;
+
+        @include xs {
+            min-width: 200px;
+            padding: 30px 20px;
+        }
+
+        .th-counterup {
+            border: none;
+            border-bottom: 1px solid $gray-color;
+            margin-bottom: 35px;
+            margin-right: 0;
+            padding: 0 0 40px 0;
+
+            &:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            .inner {
+                display: flex;
+                justify-content: flex-start;
+                gap: 15px;
+                max-width: 255px;
+
+                @include lg {
+                    justify-content: center;
+                    max-width: 100%;
+                }
+
+                @include sm {
+                    justify-content: flex-start;
+                    margin: 0;
+                }
+
+                .icon {
+                    min-width: 60px;
+
+                    @include sm {
+                        min-width: 100%;
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+
+            .content {
+                .counter {
+                    font-weight: 700;
+                    font-size: 30px;
+                    line-height: 40px;
+                    color: $theme-color;
+                    margin-bottom: 0;
+                }
+
+                .counter-card_text {
+                    font-family: var(--body-font);
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: $body-color;
+                }
+            }
+        }
+    }
+}
+
+.about-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 1px solid $gray-color;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+
+    @include xs {
+        display: block;
+    }
+}
+
+.about-image {
+    position: relative;
+    max-width: 200px;
+
+    @include xs {
+        margin-bottom: 30px;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .white-play-btn {
+        position: absolute;
+        left: 34%;
+        top: 34%;
+        width: 60px;
+        height: 60px;
+        line-height: 62px;
+        font-size: 18px;
+        z-index: 9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.achive-about-wrap {
+    position: relative;
+    margin-bottom: 40px;
+
+    .achive-about {
+        display: flex;
+        justify-content: flex-start;
+        gap: 30px;
+        max-width: 460px;
+        border-bottom: 1px solid #D2D2D2;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+
+        @include xs {
+            min-width: 100%;
+            line-height: auto;
+            height: auto;
+        }
+
+        &:last-child {
+            border-bottom: none;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+        }
+
+        .media-body {
+            margin-top: -6px;
+        }
+
+        &:hover {
+            .achive-about {
+                &_icon {
+                    img {
+                        transform: translateY(5px) translate3d(0, 5px, 0);
+                    }
+                }
+            }
+        }
+
+        &_icon {
+            min-width: 60px;
+
+            img {
+                width: 60px;
+                height: 60px;
+                transition: all 0.4s ease-in-out;
+            }
+        }
+
+        &_title {
+            font-family: $title-font;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+            color: $title-color;
+            margin-bottom: 4px;
+
+            @include xs {
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+
+        &_text {
+            font-family: $body-font;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            color: $body-color;
+            margin-bottom: 0;
+            max-width: 340px;
+
+            @include xs {
+                font-size: 14px;
+                line-height: 26px;
+            }
+        }
+    }
+}
+
+.profile-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 40px;
+
+    @include xs {
+        gap: 40px;
+    }
+
+    @media(max-width: 440px) {
+        display: block;
+    }
+
+    .title {
+        margin-bottom: 2px;
+    }
+
+    .desig {
+        font-size: 14px;
+    }
+}
+
+.about-counter-wrap {
+    background-color: $theme-color;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 37px;
+
+    @include xl {
+        padding: 30px;
+    }
+
+    @include lg {
+        max-width: 550px;
+    }
+
+    @media(max-width: 450px) {
+        display: block;
+    }
+
+
+    .about-counter {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px;
+
+        @include xl {
+            gap: 20px;
+        }
+
+        @include md {
+            display: block;
+            width: 50%;
+        }
+
+        @media(max-width: 450px) {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed $white-color;
+            padding-bottom: 20px;
+
+            &:last-child {
+                border-bottom: 1px dashed transparent;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        .border-line {
+            content: "";
+            position: absolute;
+            right: -50px;
+            width: 1px;
+            height: 100%;
+
+            @include xl {
+                right: -25px;
+            }
+
+            @include md {
+                right: 11px;
+            }
+
+            @media(max-width: 450px) {
+                display: none;
+            }
+        }
+    }
+
+}
+
+.about-counter-content {
+    .counter-card_number {
+        @include md {
+            margin-top: 15px;
+        }
+    }
+}
+
+
+hr.style1 {
+    margin-bottom: 20px;
+}
+
+@include lg {
+    .img-box1 {
+        margin-left: 0;
+        margin-bottom: 40px;
+    }
+}
+
+.about-card {}
+
+
+.sec-text2 {
+    max-width: 500px;
+}

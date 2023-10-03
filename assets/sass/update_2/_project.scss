@@ -1,0 +1,62 @@
+.project-grid {
+    display: flex;
+    .shape-triangle {
+        background-color: $theme-color;
+        min-width: 30px;
+        min-height: 100%;
+        clip-path: polygon(0 50%, 100% 0, 100% 100%); 
+    }
+    .project-title {
+        font-size: 30px;
+        margin-bottom: 0;
+        a {
+            color: inherit;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+    .project-icon {
+        margin-bottom: 20px;
+    }
+    .project-img {
+        min-width: 283px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .project-content {
+        background-color: $smoke-color;
+        padding: 30px;
+    }
+    .project-subtitle {
+        color: $theme-color;
+        display: block;
+        margin-bottom: 15px;
+        font-weight: 500;
+    }
+    .project-text {
+        font-size: 14px;
+        color: #74787C;
+        font-weight: 500;
+    }
+    .th-btn {
+        padding: 17px;
+    }
+}
+
+@include lg {
+    .project-grid {
+        flex-direction: column;
+        .shape-triangle {
+            min-height: 30px;
+            min-width: 100%;
+            clip-path: polygon(50% 0, 0 100%, 100% 100%);
+        }
+        .project-title {
+            font-size: 24px;
+        }
+    }
+}

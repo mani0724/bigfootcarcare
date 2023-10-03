@@ -1,0 +1,131 @@
+/* Counter 1 ---------------------------------- */
+.counter-block {
+    padding: 50px;
+    background-color: $title-color;
+    &_icon {
+        @include equal-size-lineHeight(80px);
+        background-color: $theme-color;
+        text-align: center;
+        margin-bottom: 30px;
+        border-radius: 50%;
+        img {
+            transition: 0.4s ease-in-out;
+        }
+    }
+    &_number {
+        font-size: 40px;
+        color: $white-color;
+        margin-bottom: 0;
+    }
+    &_text {
+        color: $white-color;
+        font-weight: 500;
+        display: block;
+        margin-bottom: -0.5em;
+    }
+    &:hover {
+        .counter-block {
+            &_icon {
+                img {
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+    }
+}
+
+@include sm {
+    .counter-block {
+        padding: 50px 15px;
+        text-align: center;
+        &_icon {
+            margin-bottom: 25px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+ 
+/* Counter 2 ---------------------------------- */
+.counter-box {
+    display: flex;
+    gap: 20px;
+    justify-content: center; 
+    padding: 80px 0;
+    &-wrap {
+        border-right: 1px solid;
+        border-color: #1F232D; 
+        &:last-child {
+            border-right: 0;
+        }
+    }
+    &_icon {
+        @include equal-size-lineHeight(80px);
+        background-color: #242934;
+        text-align: center;
+        border-radius: 50%;
+        img {
+            transition: 0.4s ease-in-out;
+        }
+    }
+    &_number {
+        font-size: 36px;
+        color: $white-color;
+        margin-bottom: 0;
+    }
+    &_text {
+        color: $light-color;
+        display: block;
+        margin-bottom: -0.5em;
+    }
+    &:hover {
+        .counter-box {
+            &_icon {
+                img {
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+    }
+}
+
+@include lg {
+    .counter-box {
+        padding: 60px 0;
+        &-wrap {
+            &:nth-child(1),
+            &:nth-child(2) {
+                border-bottom: 1px solid;
+            }
+            &:nth-child(2) {
+                border-right: 0;
+            }
+        }
+    }
+}
+
+@include sm {
+    .counter-box {
+        padding: 40px 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        &_content {
+            text-align: center;
+        }
+        &_number {
+            font-size: 32px;
+        }
+    }
+}
+
+@include xs {
+    .counter-box {
+        &-wrap {
+            border-right: 0 !important;
+            &:nth-child(3) {
+                border-bottom: 1px solid;
+            }
+        }
+    }
+}

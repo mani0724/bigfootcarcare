@@ -1,0 +1,170 @@
+/* Footer 2 ---------------------------------- */
+.footer-layout5 {
+  --body-color: #8b8e95;
+
+  .widget-area {
+    padding-top: 80px;
+    padding-bottom: 55px;
+  }
+
+  .footer-top {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid #262A35;
+  }
+
+  .copyright-wrap {
+    padding: 40px 0;
+    border-top: 1px solid #2A2F3D;
+  }
+
+  .copyright-text {
+    text-align: center;
+  }
+
+  .footer-text {
+    color: #8b8e95;
+  }
+}
+
+.th-widget-schedule {
+  margin-top: -0.25em;
+
+  .footer-info {
+    padding-left: 0;
+  }
+}
+
+.footer-table {
+  margin-top: -15px;
+  border: none;
+  margin-bottom: 0;
+
+  th,
+  td {
+    border: none;
+    padding: 8px 0;
+    font-size: 16px;
+  }
+
+  td {
+    padding-left: 50px;
+    color: #74787C;
+  }
+
+  th {
+    padding-right: 13px;
+    font-weight: 500;
+    color: $white-color;
+  }
+}
+
+.footer-logo {
+  background-color: #1B1F29;
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.newsletter-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .newsletter-title {
+    margin-bottom: 0;
+    max-width: 420px;
+
+    &.style2 {
+      max-width: 500px;
+
+      @include md {
+        text-align: left;  
+        font-size: 26px; 
+      }
+    }
+  }
+}
+
+.newsletter-form {
+  display: flex;
+  width: 100%;
+
+  // max-width: 424px; 
+  &.style4 {
+    max-width: 424px;
+  }
+
+  input {
+    background-color: #252934;
+    border: none;
+
+    &:focus {
+      background-color: #252934;
+      color: $body-color
+    }
+  }
+
+  .th-btn {
+    min-width: 150px;
+  }
+}
+
+@include lg {
+  .footer-top {
+    .footer-logo {
+      max-width: 280px;
+      margin: 0 auto 30px auto;
+    }
+  }
+}
+
+@include md {
+  .footer-layout5 {
+    .widget-area {
+      padding-top: 60px;
+      padding-bottom: 35px;
+    }
+
+    .footer-top {
+      padding-top: 80px;
+      padding-bottom: 60px;
+    }
+
+    .copyright-wrap {
+      padding: 30px 0;
+    }
+  }
+
+  .footer-wrapper {
+    .newsletter-title {
+      font-size: 26px;
+    }
+
+    .newsletter-form {
+      max-width: 380px;
+    }
+  }
+}
+
+@include sm {
+  .newsletter-wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    .newsletter-title {
+      text-align: center;
+    }
+  }
+
+  .footer-wrapper .newsletter-form {
+    max-width: 500px;
+  }
+}
+
+@include vxs {
+  .newsletter-form .as-btn {
+    min-width: 110px;
+    padding: 22px 15px;
+  }
+}

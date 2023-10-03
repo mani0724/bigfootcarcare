@@ -1,0 +1,169 @@
+/* Brand 1 ---------------------------------- */
+.brand-box {
+    width: 178px;
+    height: 102px;  
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    display: block;
+
+    &:hover {
+        a img {
+            &.gray {
+
+                opacity: 1;
+                visibility: visible;
+                transition: all 0.7s ease-in-out;
+                transform: translateY(0%); 
+
+            }
+
+            &.original {
+
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.7s ease-in-out;
+                transform: translateY(-100%);
+            }
+        }
+    }
+
+    img {
+        margin: 0 auto;
+        transition: all 0.7s ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        &.gray {
+
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.7s ease-in-out;
+            transform: translateY(-100%);
+
+
+        }
+
+        &.original {
+
+            transition: all 0.7s ease-in-out;
+            transform: translateY(0%);
+        }
+    }
+}
+// .brand-box {
+//     &-bg {
+//         background-size: 100% 100%;
+//         padding: 63px 30px;
+//     }
+
+//     text-align: center;
+//     background-color: $smoke-color2;
+//     padding: 25px 30px;
+//     height: 90px;
+//     line-height: 40px; 
+//     @include md{
+//         padding: 15px 20px;  
+//         height: 70px; 
+//     }
+
+//     &:hover {
+//         img {
+//             transform: translateY(-5px);
+//             filter: grayscale(100%);
+//         }
+//     }
+
+//     img {
+//         transition: all 0.4s ease-in-out;
+//     }
+// }
+
+.brand-title {
+    position: relative;
+    font-family: $body-font; 
+    font-weight: 500; 
+    font-size: 16px; 
+    color: $body-color;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+    &:after,
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        height: 1px;
+        width: 502px;
+        background-color: #D9D9D9;
+        @include xl{
+            width: 100%;
+        }
+        @include md{
+            width: 70%; 
+        }
+        @include sm{
+            width: 50%;
+        }
+        @include vxs{
+            display: none; 
+        }
+    }
+
+    &:before {
+        margin-left: -32.4rem; 
+        @include xl{
+            margin-left: -15.6rem;   
+        }
+        @include md{
+            margin-left: -11.6rem;    
+        }
+        @include sm{
+            margin-left: -7.9rem;    
+        }
+    }
+
+    &:after {
+        margin-left: 1rem;
+    }
+}
+
+#brandSlide1 {
+    .slick-arrow {
+        --pos-x: -46px !important;
+        --icon-size: 40px;
+        font-size: 15px;
+        margin-top: -21.5px;
+        visibility: visible;
+        opacity: 1;
+        background-color: transparent;
+        border: 1px solid $theme-color;
+        box-shadow: none;
+        border-radius: 99px;
+
+        &:hover {
+            background-color: $theme-color;
+        }
+    }
+}
+
+@include md {
+    .brand-box-bg {
+        padding: 30px 25px;
+    }
+}
+
+@include xs {
+    #brandSlide1 .slick-arrow {
+        display: none !important;
+    }
+
+    .brand-box-bg {
+        background-size: cover;
+    }
+}

@@ -1,0 +1,177 @@
+.widget_nav_menu,
+.widget_meta,
+.widget_pages,
+.widget_archive,
+.widget_categories {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 0 0;
+    }
+
+    a {
+        display: block;
+        border: none;
+        margin: 0;
+        padding: 16px 25px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.313;
+        color: $body-color;
+        border-top: 1px solid $gray-color; 
+        position: relative;
+        // &:last-child {
+        //     border-bottom: 1px solid $gray-color;  
+        // }
+        &:before {
+            content: "\f101";
+            font-family: var(--icon-font);
+            color: var(--title-color);
+            font-size: 16px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            transition: all ease 0.4s;
+        }
+
+        &:hover {
+            color: $theme-color;
+
+            &:before {
+                color: $theme-color;
+            }
+            ~span { 
+                color: $theme-color;  
+            }
+        }
+    }
+
+    li {
+        display: block;
+        position: relative;
+
+        i {
+            font-size: 16px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all ease 0.4s;
+        }
+    }
+
+    .children {
+        margin-left: 10px;
+    }
+}
+
+.widget_categories {
+    ul {
+        // margin-top: 30px;
+
+        li {
+            display: block;
+            position: relative;
+
+            // &:last-child {
+            //     a {
+            //         border-bottom: 1px solid $gray-color;
+            //     }
+            // }
+
+            a {
+                display: block;
+                border: none;
+                margin: 0;
+                padding: 17px 0px 17px 0px;
+                padding-left: 25px;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 1.313;
+                background-color: transparent; 
+                color: $title-color;
+                position: relative;
+                border-top: 1px solid $gray-color;
+                transition: all ease 0.4s;
+                &:before {
+                    content: "\f101"; 
+                    font-family: var(--icon-font); 
+                    color: var(--title-color);
+                    font-size: 16px;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    transition: all ease 0.4s;
+                }
+
+                &:hover {
+                    background-color: $theme-color;
+                    color: $white-color;
+                    padding-left: 40px;
+                    border-top: 1px solid transparent; 
+
+                    &:before {
+                        color: $white-color;
+                        padding-left: 20px; 
+                    }
+                    ~span{
+                        color: $white-color;  
+                    }
+                }
+            }
+
+            span {
+                font-size: 16px;
+                position: absolute;
+                right: 24px;
+                top: 30px;
+                transform: translateY(-50%);
+                transition: all ease 0.4s; 
+            }
+
+            i {
+                font-size: 16px;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                max-width: 30px;
+                transform: translateY(-50%);
+                transition: all ease 0.4s;
+            }
+        }
+    }
+
+
+}
+
+
+.widget_nav_menu,
+.widget_meta,
+.widget_pages {
+    a {
+        padding-right: 20px;
+    }
+}
+
+.widget_nav_menu {
+    .sub-menu {
+        margin-left: 10px;
+    }
+}
+
+.wp-block-archives {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+
+    a:not(:hover) {
+        color: inherit;
+    }
+}
+
+.th-blog ul.wp-block-archives li {
+    margin: 5px 0;
+}

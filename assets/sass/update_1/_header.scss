@@ -1,0 +1,345 @@
+/* Header 3 ---------------------------------- */
+.main-menu,
+.th-mobile-menu {
+
+    // Update 1
+    .new-label {
+        font-size: 13px;
+        background-color: $theme-color;
+        color: $white-color;
+        padding: 2px 5px;
+        border-radius: 4px;
+        position: relative;
+        top: -1px;
+    }
+}
+
+.header-notice {
+    margin-bottom: 0;
+}
+
+.simple-icon {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: #d9d9d9;
+    padding: 0;
+}
+
+.header-top-area {
+    position: relative;
+    z-index: 2;
+    --shape-width: 31%;
+
+    @include xxl {
+        --shape-width: 29%;
+    }
+
+    &:before,
+    &:after {
+        content: "";
+        height: 150px;
+        width: var(--shape-width);
+        background-color: $theme-color;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    &:before {
+        clip-path: polygon(0 0, 100% 0, calc(100% - 25px) 100%, 0% 100%);
+        z-index: 1;
+    }
+
+    &:after {
+        height: 50px;
+        width: calc(var(--shape-width) + 20px);
+        background-color: #c12901;
+        clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 100%, 0% 100%);
+    }
+}
+
+.logo-style2 {
+    position: relative;
+    z-index: 2;
+    margin-right: 148px;
+    margin-top: -43px;
+}
+
+.header-layout4 {
+    .sticky-wrapper {
+        position: relative;
+    }
+
+    @media (min-width: 1460px) {
+        --main-container: 1354px;
+    }
+
+    .header-top {
+        background-color: $white-color;
+        padding: 11px 0;
+
+        .container {
+            padding-left: 400px;
+        }
+
+        a,
+        li,
+        p {
+            color: $title-color;
+            font-weight: 500;
+        }
+
+        a:hover {
+            color: $theme-color;
+        }
+    }
+
+    .menu-top {
+        background-color: #161921;
+        padding: 23.5px 0;
+    }
+
+    .header-button { 
+        margin-left: 130px;
+        gap: 15px;
+    }
+
+    .menu-area {
+        background-color: #070a10;
+    }
+
+    .main-menu>ul>li>a {
+        padding: 16.5px 0;
+        color: $white-color;
+        text-transform: uppercase; 
+
+        &:hover {
+            color: $theme-color;
+        }
+    }
+
+    .main-menu ul li.menu-item-has-children>a {
+        &:after {
+            color: $white-color;
+        }
+
+        &:hover {
+            &:after {
+                color: $theme-color;
+            }
+        }
+    }
+
+    .header-social .social-title {
+        font-size: 16px;
+        color: $title-color;
+    }
+
+    .icon-btn {
+        --icon-bg: #2c3039;
+        color: $white-color;
+        display: inline-block;
+        width: var(--btn-size, 50px);
+        height: var(--btn-size, 50px);
+        line-height: var(--btn-size, 50px);
+        font-size: var(--btn-font-size, 16px);
+        text-align: center;
+        border-radius: 50%;
+        border: none;
+
+        &:hover {
+            background-color: var(--theme-color);
+            color: var(--white-color);
+        }
+
+    }
+
+    .header-info {
+        display: flex;
+        align-items: center;
+
+        &_icon {
+            color: $white-color;
+            font-size: 32px;
+            margin: 0 15px 0 0;
+        }
+
+        &_label {
+            font-size: 14px;
+            font-family: $title-font;
+            color: #74787C;
+            text-transform: capitalize;
+        }
+
+        &_link {
+            color: $white-color;
+            font-family: $title-font;
+            font-size: 16px;
+            font-weight: 600;
+
+            a {
+                color: inherit;
+
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+.header-link-btn {
+    margin-left: 15px;
+    color: $theme-color;
+    text-transform: uppercase;
+
+    i {
+        margin-right: 10px;
+    }
+
+    &:hover {
+        color: $white-color;
+    }
+}
+.logo-shape1 {
+    padding: 20px 0;
+    background-color: $theme-color;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    &:before,
+    &:after,
+    .shape {
+        content: "";
+        height: 100%;
+        width: 2222px;
+        background-color: $theme-color;
+        position: absolute;
+        top: 0;
+        right: -67px;
+        z-index: -1;
+        clip-path: polygon(0 0, 100% 0, calc(100% - 40px) 100%, 0% 100%);
+    }
+
+    &:after {
+        background-color: #c51726;
+        clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 100%, 0% 100%);
+        z-index: -2;
+    }
+
+    .shape {
+        right: -95px;
+        background-color: rgba(197, 23, 38, 0.1);
+        clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 100%, 0% 100%);
+    }
+}
+
+@include hd {
+    .header-top-area {
+        position: relative;
+        z-index: 2;
+        --shape-width: 35%;
+    }
+}
+
+@include xxl {
+    .header-layout4 .header-button {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 1300px) {
+    .header-top-area {
+        --shape-width: 27%;
+    }
+
+    .header-layout4 .header-top .container {
+        padding-left: 320px;
+    }
+
+    .logo-style2 {
+        margin-right: 70px;
+    }
+}
+
+@include lg {
+    .header-top-area {
+        --shape-width: 31%;
+    }
+
+    .header-layout4 .header-button {
+        margin-left: 50px;
+    }
+}
+
+@include md {
+    .header-top-area {
+        --shape-width: 46%;
+
+        &:before {
+            height: 147px;
+        }
+    }
+
+    .header-layout4 {
+
+        .sideMenuToggler,
+        .searchBoxToggler,
+        .header-link-btn {
+            display: none;
+        }
+
+        .header-top {
+            padding: 12px 0;
+        }
+    }
+}
+
+@include sm {
+    .header-top-area {
+        --shape-width: 50%;
+
+        &:before,
+        &:after {
+            height: 90px;
+            margin-top: 50px;
+        }
+    }
+
+    .logo-style2 {
+        margin-top: 0;
+    }
+
+    .header-layout4 {
+        .header-top .container {
+            padding-left: 12px;
+        }
+
+        .menu-top {
+            padding: 17px 0;
+        }
+    }
+}
+
+@include xs {
+    .header-top-area {
+        --shape-width: 60%;
+    }
+
+    .logo-style2 {
+        margin-right: 0;
+    }
+    .header-layout4 .header-button {
+        margin-left: 0px; 
+    }
+}
+
+@media (max-width: 420px) {
+    .logo-style2 {
+        max-width: 170px;
+    }
+}

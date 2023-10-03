@@ -1,0 +1,64 @@
+ /* Team 2 ---------------------------------- */
+ .team-item {
+     text-align: center;
+
+     .team-img {
+         margin-bottom: 5px;
+         overflow: hidden;
+
+         img {
+             width: 100%;
+             transition: 0.4s ease-in-out;
+         }
+     }
+
+     .team-title {
+         font-size: 24px;
+         margin-bottom: 5px;
+         margin-top: -0.24em;
+         color: $white-color;
+
+         a {
+             color: inherit;
+
+             &:hover {
+                 color: $theme-color;
+             }
+         }
+     }
+
+     .team-desig {
+         color: $theme-color;
+         display: block;
+         margin-bottom: 15px;
+         font-weight: 500;
+     }
+
+     .team-content {
+         background-color: $title-color;
+         padding: 40px 15px;
+     }
+
+     .th-social {
+         --icon-size: 40px;   
+
+         a {
+             background-color: #252934;
+             width: var(--icon-size);
+             color: $white-color;
+             border-radius: 0;
+
+             &:hover {
+                 background-color: $theme-color;
+             }
+         }
+     }
+
+     &:hover {
+         .team-img {
+             img {
+                 transform: scale(1.08);
+             }
+         }
+     }
+ }

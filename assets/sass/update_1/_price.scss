@@ -1,0 +1,218 @@
+.price-card {
+
+
+    &.style2 {
+        background-color: var(--smoke-color);
+        --space: 40px;
+        box-shadow: none;
+        padding: 0;
+
+        .price-card {
+
+            &_header,
+            &_price {
+                padding: var(--space);
+                background-color: $theme-color;
+                max-width: 100%;
+
+                i {
+                    color: rgba(255, 255, 255, 0.2);
+                }
+
+                .price {
+                    color: var(--white-color);
+                    font-size: 30px;
+                    font-weight: bold;
+                    font-family: var(--title-font);
+                }
+
+                .package-duration {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+
+            &_price {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0;
+                padding: 24px var(--space); 
+            }
+
+            &_header {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            &_title {
+                color: var(--white-color);
+                margin-bottom: 0;
+                font-size: 30px;
+                line-height: 40px;
+            }
+
+            &_subtitle {
+                color: var(--white-color);
+                margin-bottom: 0;
+            }
+
+            &_content {
+                padding: var(--space);
+                display: block;
+
+                .available-list {
+                    margin: 0;
+                    padding: 0;
+                    border: none;
+                    margin-bottom: 30px;   
+
+                    li {
+                        &:first-child {
+                            margin-top: -0.5em;  
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .checklist li:before {
+            color: $theme-color;
+        }
+
+        .th-btn {
+            background-color: $theme-color;
+        }
+    }
+}
+
+.price-box {
+    &-wrap {
+        position: relative;
+        background-color: $white-color;
+        padding: 50px;
+        z-index: 2;
+    }
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 29px;
+    margin-bottom: 29px;
+
+    &:last-child {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        border-bottom: none !important;
+    }
+
+    &_img {
+        width: 180px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &_content {
+        flex: 1;
+    }
+
+    &_header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_title,
+    &_price {
+        font-size: 24px;
+        margin-top: -0.24em;
+        line-height: 34px;  
+    }
+
+    &_price {
+        color: $theme-color;
+    }
+
+    &_list {
+        ul {
+            padding-left: 0;
+            list-style: none;
+            text-align: left;
+            margin-bottom: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 20px;
+        }
+
+        li {
+            background-color: $smoke-color;
+            font-weight: 500;
+            position: relative;
+            padding: 4px 15px 4px 38px;
+
+            &:before {
+                content: "\f058";
+                font-family: $icon-font;
+                font-weight: 500;
+                color: $theme-color;
+                position: absolute;
+                left: 15px;
+                transition: 0.3s ease-in-out;
+            }
+        }
+    }
+}
+
+@include md {
+    .price-box {
+        &-wrap {
+            padding: 30px;
+        }
+
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        gap: 30px 20px;
+
+        &_list {
+            ul {
+                gap: 10px 10px;
+            }
+        }
+    }
+}
+
+@include sm {
+    .price-box {
+        flex-wrap: wrap;
+
+        &_img {
+            min-width: 100%;
+        }
+    }
+}
+
+@include xs {
+    .price-box {
+        &_list {
+            ul {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+}
+
+@include vxs {
+    .price-box {
+        &-wrap {
+            padding: 15px;
+        }
+
+        &_title,
+        &_price {
+            font-size: 20px;
+            margin-top: -0.24em;
+        }
+    }
+}

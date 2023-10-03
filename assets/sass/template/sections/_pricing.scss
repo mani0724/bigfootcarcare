@@ -1,0 +1,191 @@
+/* Pricing 1 ---------------------------------- */
+.available-list {
+    border-top: 1px solid $gray-color;
+    padding-top: 25px;
+    margin-top: 10px;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    li {
+        position: relative;
+        font-family: $body-font;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 12px;
+        padding-left: 30px;
+        text-transform: capitalize;
+        color: $title-color; 
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:after {
+            content: "\f058";
+            font-family: $icon-font;
+            font-weight: 600;
+            color: $theme-color;
+            font-size: 1.1em;
+            vertical-align: text-top;
+            position: absolute;
+            top: 1px;
+            left: 0;
+        }
+
+        &.unavailable {
+            color: $title-color;
+
+            &:after {
+                content: "\f058";
+                right: 4px;
+                color: #787878;
+            }
+        }
+    }
+}
+
+.price-card {
+    position: relative;
+    background-color: $white-color;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+
+    &.active {
+        background-color: $title-color;
+
+        .price-card {
+            &_title {
+                color: $white-color;
+            }
+
+            &_price {
+                color: $white-color;
+
+                .currency {
+                    color: $white-color;
+                }
+
+                .duration {
+                    color: $white-color;
+                }
+            }
+        }
+
+        .available-list {
+            li {
+                color: $white-color;
+
+                &.unavailable {
+                    color: $white-color;
+                }
+            }
+        }
+
+        .price-btn {
+            .th-btn {
+                background-color: $theme-color;
+            }
+        }
+        .offer-tag {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    @include md {
+        padding: 30px;
+    }
+
+    &_title {
+        font-family: $body-font;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 24px;
+        color: $title-color;
+        margin-bottom: 20px;
+    }
+
+    &_price {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 40px;
+        color: $title-color;
+        position: relative;
+        display: block;
+        max-width: fit-content;
+        padding: 0 30px;
+        margin-bottom: 26px;
+
+        .currency {
+            font-weight: 700;
+            font-size: 44px;
+            line-height: 54px;
+            font-family: $body-font;
+            position: absolute;
+            top: -8px; 
+            left: 0px;
+            right: auto;
+            color: $title-color;
+        }
+
+        .duration {
+            font-size: 16px;
+            font-weight: 500;
+            color: $title-color;
+            margin-bottom: 0;
+            position: absolute;
+            bottom: -10px;
+            white-space: nowrap;
+        }
+    }
+
+    &_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+    }
+
+    .offer-tag {
+        background-color: $theme-color; 
+        padding: 2px 15px; 
+        font-family: $body-font; 
+        font-weight: 600;
+        font-size: 14px;
+        color: $white-color;
+        border-radius: 15px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.4s;
+    }
+
+    &_text {
+        padding-bottom: 25px;
+        margin-bottom: 28px;
+        border-bottom: 1px solid $theme-color;
+        text-align: center;
+    }
+}
+
+.price-btn {
+    margin-top: 33px;
+
+    .th-btn {
+        justify-content: center;
+    }
+}
+
+
+@include xl {
+    .price-card_title {
+        img {
+            max-width: 70px;
+        }
+    }
+}

@@ -1,0 +1,135 @@
+/* Service 1 ---------------------------------- */
+.sec-area2 {
+    position: relative; 
+    z-index: 9;  
+}
+
+.service-box-two {
+    background-color: $smoke-color;
+    position: relative;
+    z-index: 5;
+
+    &_img {
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            transition: 0.4s ease;
+        }
+    }
+
+    &_icon {
+        @include equal-size-lineHeight(var(--icon-size, 100px));
+        background-color: $white-color;
+        text-align: center;
+    }
+
+    &_content {
+        background-color: $theme-color;
+        width: calc(100% - var(--icon-size, 100px));
+        position: absolute;
+        bottom: 80px;
+        transition: 0.4s ease;
+        right: 0;
+        max-height: var(--icon-size, 100px);
+        padding: 30px;
+        overflow: hidden;
+    }
+
+    &_title,
+    &_number,
+    &_text {
+        color: $white-color;
+    }
+
+    &_title {
+        font-size: 24px;
+        margin-bottom: -0.45em;
+        font-weight: 600;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    &_number {
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-top: -0.55em;
+        margin-bottom: 2px;
+        display: block;
+        letter-spacing: 2px;
+    }
+
+    &_text {
+        margin-top: 18px;
+        margin-bottom: -0.5em;
+        transition: 0.4s ease;
+        transform: translateY(40px);
+    }
+
+    &_btn {
+        display: block;
+        overflow: hidden;
+        color: $title-color;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: $title-font;
+        padding: 27px 30px;
+        height: 80px;
+
+        i {
+            margin-left: 5px;
+        }
+
+        &:hover {
+            color: $theme-color;
+        }
+    }
+
+    &:hover {
+        .service-box-two {
+            &_content {
+                max-height: 180px;
+            }
+
+            &_text {
+                transform: translateY(0);
+            }
+
+            &_img {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+@include ml {
+    .service-box-two {
+        &_icon {
+            --icon-size: 90px;
+        }
+
+        &_content {
+            --icon-size: 90px;
+            padding: 27px 15px;
+        }
+
+        &_title {
+            font-size: 20px;
+        }
+
+        &_number {
+            font-size: 13px;
+        }
+
+        &_text {
+            font-size: 14px;
+            line-height: 1.6;
+            max-width: 200px;
+        }
+    }
+}

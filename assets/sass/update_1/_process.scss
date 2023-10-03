@@ -1,0 +1,86 @@
+.process-box {
+    &-wrap {
+        position: relative;
+        &:after {
+            content: '';
+            background-image: url("data:image/svg+xml,%3Csvg width='95' height='36' viewBox='0 0 95 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M94.4679 31.6307C91.4009 25.591 89.4353 19.3076 87.1033 12.9862C86.4971 11.3363 84.2227 12.3044 84.3522 13.8361C84.5643 16.4316 85.0589 19.0168 85.7568 21.5611C80.8294 16.8547 74.746 12.8802 69.1491 9.78191C61.6434 5.62951 53.3672 2.63034 44.9206 1.10127C30.9162 -1.43292 11.288 0.651195 1.16013 11.9057C0.580827 12.5533 1.50132 13.4325 2.18539 13.1287C9.13091 10.1 15.2731 6.79511 22.9103 5.64679C30.3866 4.52542 38.3065 4.83422 45.6747 6.54438C53.4625 8.356 60.6085 11.8604 67.2732 16.2324C72.8443 19.8919 77.5181 24.4117 82.4906 28.6701C77.814 28.5231 73.0826 29.199 69.1497 31.0075C66.8375 32.0722 67.9606 35.5872 70.4517 35.2251C74.2327 34.6769 77.7848 33.6626 81.6553 33.633C85.2441 33.6022 88.6855 34.1806 92.1939 34.8647C93.8782 35.2006 95.1984 33.0684 94.4679 31.6307Z' fill='%23E81C2E' fill-opacity='0.15'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            height: 36px;
+            width: 96px;
+            position: absolute;
+            top: 30px;
+            right: -48px;
+        }
+        &:nth-child(even) {
+            margin-top: 60px;
+            &:after {
+                transform: rotateX(180deg);
+            }
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+    text-align: center;
+    &_icon {
+        @include equal-size-lineHeight(130px);
+        background-color: $white-color;
+        border-radius: 50%;
+        text-align: center;
+        box-shadow: 0px 0px 77px 10px rgba(170, 170, 170, 0.13);
+        margin: 0 auto 25px auto;
+        transition: 0.4s ease-in-out;
+        img {
+            transition: 0.4s ease-in-out;
+        }
+    }
+    &_title {
+        font-size: 24px;
+    }
+    &_text {
+        max-width: 285px;
+        margin: 0 auto -0.5em auto;
+    }
+    &:hover {
+        .process-box {
+            &_icon {
+                background-color: $theme-color;
+                img {
+                    filter: brightness(0) invert(1);
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+    }
+}
+
+@include md {
+    .process-box {
+        &-wrap {
+            &:nth-child(even) {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@include sm {
+    .process-box {
+        &-wrap {
+            &:after {
+                display: none;
+            }
+            margin-bottom: 40px;
+            &:nth-child(even) {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

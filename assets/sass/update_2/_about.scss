@@ -1,0 +1,15 @@
+.img-box-4 {
+    img {
+        max-width: max-content;
+    }
+}
+
+@include lg {
+    .img-box-4 {
+        margin-bottom: -30px;
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+    }      
+}

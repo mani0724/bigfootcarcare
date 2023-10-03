@@ -1,0 +1,79 @@
+.footer-layout7 {
+    background-color: $title-color2; 
+    --body-color: #8b8e95;
+    overflow: hidden;
+    .copyright-wrap {
+        padding: 30px 0;
+        border-top: 1px solid #2A2F3D;
+    }
+}  
+
+.footer-layout7 {
+    padding-top: 124px;
+    .copyright-wrap {
+        border-top: none;
+        background-color: #1B1F29;
+    }
+}
+
+.footer-shape3 {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    animation: jumpReverseAni 7s linear infinite;
+    z-index: -1;
+}
+.brand-sec2 {
+    max-width: 1524px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 3;
+    padding: 49px 0;
+    margin-bottom: -124px;
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+    &:before {
+        height: 76px;
+        background-color: $body-color;
+        clip-path: polygon(38px 0, calc(100% - 38px) 0, 100% 100%, 0 100%);
+    }
+    &:after {
+        width: calc(100% - 76px);
+        left: 38px;
+        height: 100%;
+        background-color: $theme-color;
+        clip-path: polygon(0 0, 100% 0, calc(100% - 150px) 100%, 150px 100%);
+    }
+}
+
+@include ml {
+    .brand-sec2 {
+        padding: 49px 0;
+        margin-bottom: -124px;
+        &:before {
+            height: 76px;
+            background-color: $body-color;
+            clip-path: polygon(25px 0, calc(100% - 25px) 0, 100% 100%, 0 100%);
+        }
+        &:after {
+            width: calc(100% - 50px);
+            left: 25px;
+            clip-path: polygon(0 0, 100% 0, calc(100% - 60px) 100%, 60px 100%);
+        }
+    }
+}
+
+@include md {
+    .footer-shape3 {
+        top: 300px;
+        max-width: 200px;
+    }
+}

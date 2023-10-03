@@ -1,0 +1,136 @@
+/* Appointment 1 ---------------------------------- */
+.appointment-img {
+    position: relative;
+    margin-right: 72px;
+    height: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .th-experience {
+        position: absolute;
+        left: 0;
+        top: 125px;
+    }
+}
+
+.th-experience {
+    background-color: $theme-color; 
+    max-width: 257px;
+    padding: 40px;
+
+    .experience-year {
+        font-size: 60px;
+        color: $white-color;
+        margin-bottom: 10px; 
+    }
+
+    .experience-text {
+        color: $white-color;
+        text-transform: uppercase;
+        font-family: $body-font; 
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+}
+
+@include ml {
+    .appointment-img {
+        margin-right: 0;
+    }
+}
+
+@include md {
+    .appointment-img {
+        margin-bottom: 60px;
+        height: auto;
+    }
+}
+
+@include sm {
+    .appointment-form {
+        .form-btn {
+            text-align: center;
+        }
+    }
+
+    .appointment-img {
+        .th-experience {
+            top: 70px;
+        }
+    }
+
+    .th-experience {
+        max-width: 190px;
+        padding: 30px;
+
+        .experience-year {
+            font-size: 48px;
+        }
+
+        .experience-text {
+            font-size: 18px;
+        }
+    }
+}
+
+.appointment-img2 {
+    position: relative;
+    padding-right: 80px;
+    height: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .th-experience {
+        position: absolute;
+        bottom: 80px;
+        left: -80px;
+    }
+}
+
+.appointment-form-wrap {
+    padding: 90px 80px 90px 0;
+}
+
+@include ml {
+    .appointment-img2 {
+        .th-experience {
+            bottom: 12px;
+            left: -12px;
+        }
+    }
+}
+
+@include lg {
+    .appointment-img2 {
+        padding-right: 0;
+    }
+
+    .appointment-form-wrap {
+        padding: 90px 80px 90px 80px;
+
+        .form-btn {
+            text-align: center;
+        }
+    }
+}
+
+@include md {
+    .appointment-form-wrap {
+        padding: 60px 50px 60px 50px;
+    }
+}
+
+@include xs {
+    .appointment-form-wrap {
+        padding: 50px 20px 50px 20px;
+    }
+}

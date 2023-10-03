@@ -1,0 +1,56 @@
+.img-box3 {
+    .img1 {
+        text-align: left;
+
+        @include lg {
+            text-align: center;
+        }
+    }
+
+    .img3 {
+        position: absolute;
+        top: 17%;
+        left: 15%;
+        right: unset;
+        @include xl{
+            left: 0;
+        }
+        @include lg{
+            left: 25%; 
+        }
+        @include md{
+            left: 0%; 
+        }
+    }
+
+    .about-shape { 
+        right: unset;
+        left: 16%;
+        @include lg{
+            left: 25%;  
+        }
+        @include md{ 
+            left: 0%; 
+        }
+    }
+
+    .line-animation {
+        right: 45px;
+    }
+
+    .about-counter {
+        right: 0;
+    }
+
+    .vehicle-repair {
+        left: unset;
+        right: 0px;
+    }
+}
+.about-counter1 {
+    left: -20px; 
+    right: unset;
+    @include sm{
+        left: 0; 
+    }
+}

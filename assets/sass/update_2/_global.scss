@@ -1,0 +1,116 @@
+.widget_shopping_cart .quantity {
+    margin-top: 4px;
+}
+
+.play-btn.style2 {
+    > i {
+        --icon-size: 80px;
+        --icon-font-size: 1.2em;
+        background-color: $theme-color;
+        color: $white-color;
+    }
+    &:after,
+    &:before {
+        background-color: $theme-color;
+    }
+    &:hover {
+        > i {
+            background-color: $white-color;
+            color: $theme-color;
+        }
+        &:after,
+        &:before {
+            background-color: $white-color;
+        }
+    }
+}
+
+@include md {
+    .icon-box {
+        .slick-arrow {
+            --icon-size: 60px;
+            margin-right: 0;
+            &.slick-next {
+                margin-right: 0;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.body-shape8,
+.body-shape9 {
+    position: absolute;
+    z-index: -1;
+    max-width: 100%;
+}
+.body-shape8 {
+    top: 120px;
+    right: 0;
+    animation: jumpReverseAni 7s linear infinite;
+}
+.body-shape9 {
+    top: 0;
+    left: 0;
+}
+
+@include lg {
+    .body-shape8 {
+        max-width: 200px;
+    }
+}
+
+.checklist.style4 {
+    ul {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    li {
+        &::before {
+            content: "\f00c";
+        }
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .checklist.style4 {
+        ul {
+            grid-template-columns: auto;
+        }
+    }
+}
+
+.border-white {
+    border-color: $white-color !important; 
+}
+
+.img-box-5 {
+    margin-left: -110px;
+    margin-right: 50px;
+    @include lg {
+        margin-left: 0;
+        margin-right: 0;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.blog-card {
+    box-shadow: 0px 10px 15px rgba(162, 162, 162, 0.1);
+}
+.cta-sec-title{
+    font-size: 40px; 
+    @include lg {
+        font-size: 36px; 
+    }
+    @include sm {
+        font-size: 30px; 
+    }
+}

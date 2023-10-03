@@ -1,0 +1,319 @@
+/* Counter 1 ---------------------------------- */
+.counter-area {
+    @media(max-width: 1399px) {
+        .container {
+            max-width: 100%;
+        }
+    }
+}
+
+.counter-sec {
+    position: relative;
+    padding: 60px 50px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 9;
+    @media(max-width: 1399px) {
+        padding: 50px 40px;
+    }
+
+    @include xl {
+        padding: 50px;
+    }
+
+    @include lg {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px;
+    }
+
+    @media(max-width: 460px) {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 20px;
+    }
+
+    &.style2 {
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        @include lg {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include xs {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+    }
+}
+
+.counter-area3 {
+    position: relative;
+
+    @include sm {
+        .container {
+            max-width: 100%;
+        }
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    }
+}
+
+.th-counterup {
+    border-right: 1px dashed $body-color;
+    margin-right: 40px;
+    padding-right: 55px;
+
+    @include xl {
+        margin-right: 25px;
+        padding-right: 40px;  
+    }
+
+    @include lg {
+        border-right: 1px dashed $body-color;
+        border-bottom: 1px dashed $body-color;
+        padding: 50px;
+        margin-right: 0;
+        text-align: center;
+
+        &:nth-child(2) {
+            border-right: 1px dashed transparent;
+            margin-right: 0;
+        }
+
+        &:nth-child(3) {
+            border-bottom: 1px dashed transparent;
+        }
+
+        &:last-child {
+            border-bottom: 1px dashed transparent;
+        }
+    }
+
+    @include md {
+        padding: 25px;
+    }
+
+
+    @media(max-width: 460px) {
+        border: none;
+        padding: 20px 0;
+
+    }
+
+    &:hover {
+        .icon {
+            svg {
+
+                path {
+                    stroke: $theme-color !important;
+                    stroke-width: 1;
+                }
+            }
+        }
+    }
+
+    @include md {
+        padding: 30px;
+    }
+
+    @include sm {
+        text-align: center;
+    }
+
+    @media(max-width: 460px) {
+        border: none;
+        padding: 20px 0;
+
+    }
+
+    .inner {
+        display: flex;
+        justify-content: flex-start; 
+        gap: 15px;
+        max-width: 255px;
+        @include lg{
+            display: block;
+            max-width: 100%;
+            margin: auto; 
+        }
+
+        @media(max-width: 600px) { 
+            display: block;
+            max-width: 100%;
+            margin: auto;
+        }
+    }
+
+    &.style3 {
+        text-align: center;
+        border-right: 1px dashed $white-color;
+
+        @include lg {
+            border-right: 1px dashed $white-color;
+            border-bottom: 1px dashed $white-color;
+            padding: 50px 0;
+
+            &:nth-child(2) {
+                border-right: 1px dashed transparent;
+            }
+
+            &:nth-child(3) {
+                border-bottom: 1px dashed transparent;
+            }
+
+            &:last-child {
+                border-bottom: 1px dashed transparent;
+            }
+        }
+
+        @include xs {
+            border: none;
+            padding: 20px 0;
+        }
+
+        .inner {
+            display: block;
+
+            @include lg {
+                max-width: 100%;
+            }
+
+            .icon {
+                background-color: $theme-color;
+                padding: 24px;
+                min-width: 100px;
+                width: 100px;
+                height: 100px;
+                display: block;
+                margin: auto;
+                border-radius: 50%;
+                text-align: center;
+                margin-bottom: 15px;
+
+            }
+
+            .content {
+                .counter {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+
+
+    &:last-child {
+        border-right: 1px dashed transparent;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+
+    .content {
+
+        .counter {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 40px;
+            color: $white-color;
+            margin-bottom: 0;
+
+            @include lg {
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+        }
+
+        .counter-card_text {
+            font-family: $body-font;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: $gray-color;
+
+            @include sm {
+                font-size: 14px;
+                line-height: 28px;
+            }
+        }
+    }
+}
+
+.counter-card {
+    position: relative;
+    text-align: center;
+
+    .border-line {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 1px;
+        height: 100%;
+
+    }
+
+
+    &_icon {
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    &_number {
+        font-family: $title-font;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 60px;
+        color: $title-color;
+        margin-bottom: 2px;
+        margin-top: -0.24em;
+    }
+
+    &_text {
+        font-family: $body-font;
+        color: $body-color;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        display: block;
+        margin-bottom: -6px;
+    }
+}
+
+@include md {
+    .counter-card_number {
+        font-size: 40px;
+    }
+}
+
+.customer-title {
+    font-family: $title-color;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 55px;
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 765px;
+    display: block;
+    margin: 0 auto;
+    color: $white-color;
+
+    @include xs {
+        font-size: 35px;
+        line-height: 45px;
+    }
+}

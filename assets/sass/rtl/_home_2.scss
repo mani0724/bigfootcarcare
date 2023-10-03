@@ -1,0 +1,60 @@
+.hero-2 {
+    .hero-shape {
+        right: auto;
+        left: 0;
+
+        @include lg {
+            bottom: 0;
+        }
+    }
+
+    .hero-shape2 {
+        left: auto;
+        right: 0;
+    }
+
+    .hero-bg {
+        left: 18%;
+        right: auto;
+    }
+
+    .slick-arrow {
+        right: auto;
+        left: 15%;
+    }
+}
+
+.process-sec {
+    .process-line {
+        @media(max-width: 1399px) {
+            left: 40%;
+            transform: translate(calc(-20% + 200px), calc(-20% + 10px));
+            max-width: 90%;
+        }
+
+        @include xl {
+            left: 45%;
+        }
+    }
+}
+
+.accordion-card {
+    &.style2 {
+        .accordion-body {
+            margin: 0 30px 0 130px;
+            padding: 20px 0 30px 0;
+            @include md{
+                margin: 0 30px 0 30px;
+            }
+        }
+    }
+}
+
+.accordion-area {
+    .title-area {
+        @media(min-width: 1199px) { 
+            margin-right: auto;
+            margin-left: 80px;
+        }
+    }
+}

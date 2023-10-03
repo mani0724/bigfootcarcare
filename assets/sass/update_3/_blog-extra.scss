@@ -1,0 +1,20 @@
+/* blog 5 ---------------------------------- */
+.blog-block {
+    &.style2 {
+        background-color: $white-color;
+        box-shadow: 0px 10px 15px rgba(162, 162, 162, 0.1);
+
+        .blog-title {
+            font-size: 24px;
+            margin-bottom: 0;
+        }
+        .link-btn {
+            margin-bottom: -0.2em;
+            display: block;
+            width: fit-content;
+            margin-top: 15px;
+            text-transform: capitalize;
+            color: $theme-color; 
+        }
+    }
+}

@@ -1,0 +1,118 @@
+.footer-layout4 {
+    background-color: #161921;
+    --body-color: #8b8e95;
+    overflow: hidden;
+     .footer-text { 
+        color: #8b8e95;
+    }
+
+    .widget-area {
+        padding-top: var(--section-space);
+        padding-bottom: 75px;
+    }
+
+    .copyright-wrap {
+        padding: 30px 0;
+        border-top: 1px solid #2A2F3D;
+    }
+
+    .th-social {
+        a {
+            background-color: #252934;
+            color: $white-color;
+            border: none;
+            border-radius: 99px;
+
+            &:hover {
+                background-color: $theme-color;
+            }
+        }
+    }
+
+
+
+    .footer-widget .recent-post {
+        border-bottom: 1px solid #2B2F3A;
+
+        &:last-child {
+            border-bottom: 1px solid transparent;
+        }
+    }
+
+    .newsletter-form {
+        input {
+            background-color: transparent;
+            border: none;
+            color: $white-color;
+
+            @include inputPlaceholder {
+                color: $white-color;
+            }
+        }
+
+        .th-btn {
+            min-width: 100%;
+        }
+    }
+}
+
+.footer-info {
+    position: relative;
+    margin: 0 0 25px 0;
+    display: flex;
+    align-items: center;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 0 0 0 35px;
+    max-width: 300px;
+
+    &-title {
+        font-size: 14px;
+        font-family: var(--title-font);
+        font-weight: 500;
+        text-transform: uppercase;
+        color: var(--white-color);
+        margin-bottom: 10px;
+        margin-top: -0.2em;
+    }
+    i {
+        display: inline-block; 
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        background-color: var(--theme-color);
+        color: var(--white-color);
+        position: absolute;
+        left: 0;
+        font-size: 10px;
+    }
+}
+
+.footer-widget {
+    --gray-color: #8b8e95;
+}
+
+@include lg {
+    .footer-layout4 .copyright-wrap {
+        padding: 25px 0;
+    }
+}
+
+@include md {
+    .footer-layout4 {
+        .widget-area {
+            padding-top: $space-mobile;
+            padding-bottom: 38px;
+        }
+    }
+}
+
+.widget_newsletter {
+    max-width: 300px;
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

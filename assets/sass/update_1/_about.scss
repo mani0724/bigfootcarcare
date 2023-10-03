@@ -1,0 +1,308 @@
+.bg-shape1 {
+    position: absolute;
+    height: 58%;
+    width: 100%;
+    max-width: 1680px;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f6f6f6;
+    z-index: -1;
+}
+
+.tab-menu4 {
+    margin-bottom: 32px;
+    gap: 20px;
+
+    .th-btn {
+        background-color: $white-color;
+        color: $title-color;
+        padding: 15px 25px;
+
+        &:before {
+            background-color: $theme-color;
+        }
+
+        &:hover,
+        &.active {
+            color: $white-color;
+            background-color: $theme-color;
+        }
+    }
+}
+
+.about-progress {
+    margin-bottom: 32px;
+
+    &_title,
+    .progress-value {
+        font-size: 18px;
+        margin-bottom: 0;
+        font-weight: 600;
+        margin-top: 14px;
+    }
+
+    .progress {
+        position: relative;
+        height: 8px;
+        background-color: #f6f6f6;
+        overflow: visible;
+        border-radius: 0;
+    }
+
+    .progress-bar {
+        background-color: $theme-color;
+    }
+
+    .progress-value {
+        font-family: $title-font;
+        color: $title-color;
+        font-weight: bold;
+        margin-bottom: 0;
+        position: absolute;
+        bottom: -40px;
+        right: 0;
+    }
+}
+
+.skill-card {
+    &.style4 {
+        padding-top: 40px;
+
+        .skill-feature {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+/* About 3 ---------------------------------- */
+.img-box-2 {
+    position: relative;
+
+    .img2,
+    .img3 {
+        display: inline-block;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .img1 {
+        margin-left: auto;
+        max-width: 387px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .img2 {
+        margin-top: -100px;
+        animation: jumpAni 7s linear infinite;
+    }
+
+    .img3 {
+        position: absolute;
+        bottom: 0;
+        right: 127px;
+        animation: movingX 8s linear infinite;
+    }
+
+    .th-experience {
+        position: absolute;
+        left: 75px;
+        top: 14%;
+
+        @include lg {
+            left: 20%;
+            top: 20%;
+        }
+
+        @include sm {
+            max-width: 225px; 
+        }
+    }
+}
+
+.th-experience {
+    &.style2 {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .experience-year {
+            font-size: 40px;
+            min-width: 45px;
+            margin-bottom: -0.2em;
+        }
+
+        .experience-text {
+            font-size: 16px;
+            margin-bottom: -0.3em;
+        }
+    }
+}
+
+.about-checklist {
+    margin-bottom: 30px;
+}
+
+@include lg {
+    .img-box-2 {
+        .img1 {
+            max-width: 65%;
+        }
+
+        .img2 {
+            width: 50%;
+        }
+
+        .img3 {
+            width: 25%;
+        }
+
+        .as-experience {
+            left: 20%;
+            top: 20%;
+        }
+    }
+}
+
+@include sm {
+    .checklist.style2.about-checklist ul {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+    }
+}
+
+@media (max-width: 485px) {
+    .checklist.style2.about-checklist ul {
+        max-width: 230px;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto 45px auto;
+    }
+}
+
+/* About 4 ---------------------------------- */
+.img-box-3 {
+    position: relative;
+    text-align: right;
+    margin-right: -110px;
+
+    .img1 {
+        padding-bottom: 125px;
+    }
+
+    .img2 {
+        position: absolute;
+        bottom: 0;
+        left: 30px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.th-experience {
+    &.style3 {
+        background-color: $theme-color;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-align: left;
+        padding: 20px;
+        min-width: 100%;
+
+        .experience-year {
+            font-size: 36px;
+            color: $white-color;
+            display: flex;
+            min-width: 70px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+
+        .experience-text {
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: capitalize;
+            color: $white-color;
+            margin-bottom: 0;
+        }
+
+        .odometer.odometer-auto-theme {
+            margin-top: 10px;
+        }
+    }
+}
+
+
+@include xxl {
+    .img-box-3 {
+        margin-right: -30px;
+    }
+}
+
+@include ml {
+    .img-box-3 {
+        margin-right: -30px;
+    }
+}
+
+@include lg {
+    .bg-shape1 {
+        height: 77.6%;
+    }
+
+    .img-box-3 {
+        margin-right: 0;
+        margin-bottom: 40px;
+
+        .img1 {
+            width: 80%;
+            margin-left: auto;
+            padding-bottom: 90px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .img2 {
+            left: 0;
+        }
+    }
+}
+
+@include md {
+    .bg-shape1 {
+        height: 76%;
+    }
+}
+
+@include sm {
+    .bg-shape1 {
+        height: 74.7%;
+    }
+}
+
+@include xs {
+    .tab-menu4 {
+        gap: 10px;
+    }
+}
+
+@include vxs {
+    .th-experience {
+        &.style3 {
+            .experience-text {
+                font-size: 18px;
+            }
+        }
+    }
+}

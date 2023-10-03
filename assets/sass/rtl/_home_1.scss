@@ -1,0 +1,30 @@
+.hero-1 {
+    .slick-arrow {
+        &.default {
+            --pos-x: -100px;
+            @media(max-width: 1699px) {
+                --pos-x: -40px;
+            }
+
+            &:hover {
+                .icon-text {
+                    margin-left: auto;
+                    margin-right: -10px;
+                }
+            }
+        }
+
+        &.default1 {
+            --pos-x: 100px;
+            @media(max-width: 1699px) {
+                --pos-x: 40px;
+            }
+            &:hover {
+                .icon-text {
+                    margin-right: auto;
+                    margin-left: -10px; 
+                }
+            }
+        }
+    }
+}

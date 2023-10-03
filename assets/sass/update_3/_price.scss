@@ -1,0 +1,113 @@
+/* Pricing 1 ---------------------------------- */  
+.price-item {
+    background-color: $smoke-color; 
+    --space: 40px;
+    &_header {
+        background-color: $title-color;
+        border-bottom: 1px solid rgba($color: #fff, $alpha: 0.05);
+        padding: var(--space);
+        transition: 0.4s ease-in-out;
+    }
+    &_title {
+        color: $white-color; 
+        margin-bottom: 0;
+        font-size: 30px;
+    }
+    &_subtitle {
+        color: $white-color;
+        margin-bottom: 0;
+    }
+    &_price {
+        background-color: $title-color;
+        color: $white-color;
+        padding: 30px var(--space);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.4s ease-in-out;
+        .price {
+            color: $white-color;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: $title-font;
+        }
+        .package-duration {
+            font-size: 16px;
+            font-weight: 400;
+        }
+        i {
+            font-size: 36px;
+            color: rgba($color: #fff, $alpha: 0.05);
+        }
+    }
+    &_content {
+        padding: var(--space);
+        padding-bottom: calc(var(--space) - 6px);
+    }
+    .checklist {
+        margin-bottom: var(--space);
+    }
+    &:not(:hover) {
+        .checklist {
+            li {
+                &:before {
+                    color: $title-color;
+                }
+            }
+        }
+        .th-btn{
+            background-color: $title-color;
+            &:before, 
+            &:after {
+                background-color: $theme-color;
+            }
+            
+        }
+    }
+    &:hover {
+        .price-item {
+            &_header,
+            &_price {
+                background-color: $theme-color;
+                border-color: rgba($color: #fff, $alpha: 0.2);
+            }
+            &_price {
+                i {
+                    color: rgba($color: #fff, $alpha: 0.2);
+                }
+            }
+        }
+    }
+}
+
+@include ml {
+    .price-item {
+        --space: 20px;
+        &_header {
+            padding: 30px var(--space);
+        }
+        &_price {
+            padding: 22px var(--space);
+        }
+        &_content {
+            padding: 40px var(--space);
+            padding-bottom: 34px;
+        }
+        .checklist {
+            margin-bottom: 35px;
+        }
+    }
+}
+
+@include lg {
+    .price-item {
+        &_title {
+            font-size: 26px;
+        }
+        &_price {
+            .price {
+                font-size: 26px;
+            }
+        }
+    }
+}

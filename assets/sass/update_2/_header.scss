@@ -1,0 +1,193 @@
+/* Header 4 ---------------------------------- */
+.logo-style3 {
+    position: relative;
+    z-index: 3;
+    background-color: $theme-color;
+    height: 100px;
+    padding: 20px 26px;
+    margin-right: 36px;
+
+    &:before {
+        content: '';
+        width: 100%;
+        height: 250px;
+        background-color: inherit;
+        position: absolute;
+        top: -60px;
+        left: 0;
+        z-index: -1;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 90px), 50% 100%, 0 calc(100% - 90px));
+    }
+}
+
+.header-layout7 {
+    @media (min-width: 1300px) {
+        --main-container: 1700px;
+    }
+
+    .header-top {
+        --body-color: #fff;
+        background-color: $title-color;
+        padding: 11px 0;
+
+        .container {
+            padding-left: 334px;
+        }
+
+        a,
+        li,
+        p,
+        span {
+            color: $body-color;
+            font-weight: 500;
+        }
+
+        a:hover {
+            color: $theme-color;
+        }
+    }
+
+    .main-menu>ul>li {
+        @include xxl {
+            margin: 0 14px;
+        }
+    }
+
+    .main-menu {
+        >ul>li>a {
+            padding: 36.5px 0;
+            text-transform: uppercase;
+
+            @include xxl {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .header-button {
+        align-items: center;
+        gap: 15px;
+    }
+
+    .header-links {
+        li {
+            border: none;
+
+            &:not(:last-child):before {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 50%;
+                background-color: var(--theme-color);
+                width: 1px;
+                height: 20px;
+                margin: -10px 0 0 0;
+            }
+        }
+    }
+
+    .th-btn {
+        padding: 18px 20px;
+
+        @include xxl {
+            padding: 16px 18px; 
+            font-size: 14px;
+        }
+    }
+
+    .icon-btn {
+        position: relative;
+        border: 1px solid #D3D3D3;
+        background-color: $smoke-color;
+        border-radius: 50%;
+        width: var(--btn-size, 50px);
+        height: var(--btn-size, 50px);
+        line-height: var(--btn-size, 50px);
+        font-size: var(--btn-font-size, 16px);
+
+        &:hover {
+            background-color: $theme-color;
+            border-color: $theme-color;
+            color: $white-color;
+        }
+
+        .badge {
+            font-size: .75em;
+            top: 0px;
+            right: -4px;
+        }
+    }
+}
+
+@include ml {
+    .logo-style3 {
+        margin-right: 10px;
+    }
+
+    .header-layout7 {
+        .header-links {
+            li:nth-child(2) {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+
+        .header-top .container {
+            padding-left: 310px;
+        }
+
+        .main-menu>ul>li {
+            margin: 0 12px;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .logo-style3 {
+        padding: 15px 15px;
+    }
+
+    .header-layout7 {
+        .header-button {
+            .th-btn {
+                display: none;
+            }
+        }
+
+        .header-top .container {
+            padding-left: 284px;
+        }
+    }
+}
+
+@include lg {
+    .logo-style3 {
+        line-height: 92px;
+        padding: 0 15px;
+
+        &:before {
+            top: 0;
+            height: 190px;
+        }
+    }
+
+    .header-layout7 {
+        .header-top .container {
+            padding-left: 12px;
+        }
+    }
+}
+
+@include md {
+    .logo-style3 {
+        max-width: 170px;
+        height: 80px;
+        line-height: 74px;
+
+        &:before {
+            height: 130px;
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 50% 100%, 0 calc(100% - 50px));
+        }
+    }
+}

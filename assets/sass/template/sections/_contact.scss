@@ -1,0 +1,1086 @@
+/* Contact 1 ---------------------------------- */
+.contact-img {
+    height: 100%;
+    position: relative;
+    z-index: 2;
+
+    img {
+        max-width: fit-content;
+        height: 100%;
+    }
+}
+
+.rsvp-form {
+    .form-group {
+        margin-bottom: 30px;
+    }
+}
+
+.contact-area {
+    --space: 60px;
+    position: relative;
+
+    &::before {
+        content: '';
+        height: calc(100% - var(--space)*2);
+        width: calc(100% + var(--space)*2);
+        position: absolute;
+        top: var(--space);
+        left: calc(0px - var(--space));
+        border: 2px solid $theme-color;
+    }
+
+    .shape {
+        position: absolute;
+        top: 0;
+        left: -182px;
+    }
+}
+
+@include lg {
+    .contact-area {
+        &::before {
+            display: none;
+        }
+    }
+
+    .contact-img {
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+/* Request Page ----------------------- */
+.request-area {
+    margin-top: -66px;
+
+    @include lg {
+        margin-top: 0;
+    }
+}
+
+.request-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 30px;
+
+    @include lg {
+        justify-content: center;
+    }
+
+    @include xs {
+        display: block;
+        margin: auto;
+        text-align: center; 
+
+        .btn-group {
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .feature-wrapper { 
+            display: inline-flex;
+            justify-content: center;
+            text-align: left; 
+        }
+    }
+}
+
+.request-quote-form {
+    background-color: $theme-color;
+    padding: 50px;
+    position: relative;
+    z-index: 9;
+
+    @include xs {
+        padding: 30px 20px;
+    }
+
+    &.style2 {
+        background-color: $white-color;
+        box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.08);
+        margin: 0 40px -35px 0;
+
+        @media(max-width: 1399px) {
+            margin: 0 0px -40px 0;
+            padding: 30px;
+        }
+
+        @include lg {
+            margin-bottom: 40px;
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            padding: 12px 20px;
+            padding-left: 45px;
+        }
+        .th-btn{
+            @include xs{
+                padding: 14px 20px;
+            }
+        }
+    }
+
+    select,
+    .form-control,
+    .form-select,
+    textarea,
+    input {
+        height: 56px;
+        padding: 0 22px 0 22px;
+        padding-left: 42px;
+        border: 1px solid transparent;
+        color: $body-color;
+        background-color: $smoke-color2;
+        border-radius: 4px;
+        font-size: 16px;
+        width: 100%;
+        font-family: $body-font;
+        -webkit-transition: 0.4s ease-in-out;
+        transition: 0.4s ease-in-out;
+    }
+
+    .nice-select {
+        .option {
+            color: $title-color;
+
+            &.selected {
+                color: $theme-color !important;
+                background: $theme-color !important;
+
+                &.focus {
+                    color: #fff !important;
+                    background: $theme-color !important;
+                }
+            }
+
+            &:hover,
+            &.focus {
+                background: $theme-color !important;
+                color: #fff !important;
+            }
+        }
+
+        &.open {
+            .list {
+                border-bottom: 3px solid $theme-color;
+            }
+        }
+    }
+
+
+    .form-group {
+        margin-bottom: 20px;
+
+        i {
+            left: 33px;
+            top: 19px;
+            z-index: 9;
+            max-width: 15px;
+        }
+    }
+
+    textarea {
+
+        &.form-control,
+        textarea {
+            min-height: 96px;
+            padding: 12px 20px;
+            padding-left: 45px;
+        }
+    }
+
+    .request-shape {
+        position: absolute;
+        left: -25%;
+        bottom: 4%;
+
+        @include md {
+            display: none;
+        }
+    }
+}
+
+.th-request-form {
+    background-color: $theme-color;
+    padding: 60px;
+
+    @include md {
+        padding: 40px;
+        margin-right: 7px;
+
+        .btn-group {
+            margin-bottom: 0px;
+        }
+    }
+
+    @include sm {
+        margin-right: 5px;
+    }
+
+    @include xs {
+        padding: 30px;
+        margin-right: 0px;
+    }
+
+    &.style2 {
+        background-color: transparent;
+        min-width: 880px;
+        width: 100%;
+        padding: 60px;
+
+        @include xl {
+            min-width: 700px;
+        }
+
+        @include lg {
+            min-width: 550px;
+            padding: 40px;
+        }
+
+        @include md {
+            min-width: 100%;
+            padding: 30px;
+        }
+
+        @include xs {
+            padding: 30px;
+        }
+
+        .request-wrapper {
+            background-color: transparent;
+        }
+
+        .form-group {
+
+            select,
+            .form-control,
+            .form-select,
+            textarea,
+            input {
+                background-color: $white-color;
+                color: $black-color-2;
+
+                &:focus {
+                    outline: 0;
+                    box-shadow: none;
+                    border-color: $theme-color;
+                    background-color: $white-color;
+                }
+
+                @include inputPlaceholder {
+                    color: $black-color-2;
+                }
+            }
+
+            i {
+                display: inline-block;
+                position: absolute;
+                right: 35px;
+                top: 19px;
+                font-size: 16px;
+                color: $theme-color;
+            }
+
+            .nice-select {
+                &:after {
+                    border-bottom: 1px solid $theme-color;
+                    border-right: 1px solid $theme-color;
+                }
+            }
+        }
+
+
+    }
+
+    &.style3 {
+        background-color: $smoke-color;
+        max-width: 100%;
+        padding: 60px;
+
+        @include lg {
+            padding: 40px;
+        }
+
+        @include xs {
+            padding: 20px;
+        }
+
+        .form-group {
+
+            select,
+            .form-control,
+            .form-select,
+            textarea,
+            input {
+                background-color: $white-color;
+                color: $body-color;
+
+                &:focus {
+                    outline: 0;
+                    box-shadow: none;
+                    border-color: $theme-color;
+                    background-color: $white-color;
+                }
+
+                @include inputPlaceholder {
+                    color: $black-color-2;
+                }
+            }
+
+            i {
+                display: inline-block;
+                position: absolute;
+                right: 35px;
+                top: 19px;
+                font-size: 16px;
+                color: $theme-color;
+            }
+
+            .nice-select {
+                &:after {
+                    border-bottom: 1px solid $theme-color;
+                    border-right: 1px solid $theme-color;
+                }
+            }
+        }
+
+    }
+
+    .form-group {
+
+        select,
+        .form-control,
+        .form-select,
+        textarea,
+        input {
+            background-color: rgba(255, 255, 255, 0.1);
+            height: 60px;
+            color: $white-color;
+
+
+            &:focus {
+                outline: 0;
+                box-shadow: none;
+                border-color: $white-color;
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+
+            @include inputPlaceholder {
+                color: $white-color;
+            }
+        }
+
+        i {
+            display: inline-block;
+            position: absolute;
+            right: 35px;
+            top: 19px;
+            font-size: 16px;
+            color: $white-color;
+        }
+
+        .nice-select {
+            &:after {
+                border-bottom: 1px solid $white-color;
+                border-right: 1px solid $white-color;
+            }
+
+            .option {
+                color: $title-color;
+
+                &.selected {
+                    color: $theme-color !important;
+                    background: $theme-color !important;
+
+                    &.focus {
+                        color: #fff !important;
+                        background: $theme-color !important;
+                    }
+                }
+
+                &:hover,
+                &.focus {
+                    background: $theme-color !important;
+                    color: #fff !important;
+                }
+            }
+
+            &.open {
+                .list {
+                    border-radius: 0;
+                    border: 1px solid $white-color;
+                    border-bottom: 3px solid $theme-color;
+                }
+            }
+        }
+
+    }
+
+    textarea.form-control {
+        min-height: 140px;
+        padding: 25px 25px 0 25px;
+        border: none;
+    }
+
+
+}
+
+/* Inquiry ---------------------------------- */
+.inquiry-form {
+    background-color: $white-color;
+    padding: 50px;
+    box-shadow: 0px 10px 30px rgba(1, 15, 28, 0.06);
+}
+
+@include xs {
+    .inquiry-form {
+        padding: 40px 20px;
+    }
+}
+
+/* RSVP Page ----------------------- */
+.map-sec {
+    line-height: 0;
+
+    iframe {
+        width: 100%;
+        height: 550px;
+
+        @include xl {
+            height: 400px;
+        }
+
+        @include sm {
+            height: 300px;
+        }
+    }
+}
+
+/* Contact Page ---------------------------------- */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+    max-width: 332px;
+
+    &.style2 {
+        margin-bottom: 20px;
+
+        .media-body {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+
+            i {
+                color: $theme-color;
+                font-size: 20px;
+                line-height: 20px;
+            }
+
+            .contact-info_text {
+                margin-bottom: 0;
+
+                a {
+                    @include xs {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &_title {
+        font-family: $body-font;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 26px;
+        color: #787878;
+        margin-bottom: 5px;
+    }
+
+    &_icon {
+        color: $theme-color;
+        text-align: center;
+        font-size: 28px;
+        position: relative;
+        background-color: rgba(235, 51, 0, 0.1);
+        width: 70px;
+        height: 70px;
+        line-height: 65px;
+        display: block;
+        margin: auto;
+        border-radius: 50%;
+    }
+
+    &_text {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        color: $black-color;
+        min-width: 242px;
+        display: block;
+        margin-bottom: -0.5em;
+
+        a {
+            color: inherit;
+        }
+
+        span,
+        a {
+            display: block;
+            max-width: fit-content;
+        }
+
+        a {
+            color: $black-color;
+
+            @include xs {
+                text-align: center;
+                max-width: 100%;
+            }
+
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+
+    &:hover {
+        .contact-info {
+            &_icon {
+                &:before {
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+.contact-wrapper {
+    border-top: 1px solid rgba(210, 210, 210, 0.5);
+    margin-top: 30px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    max-width: 450px;
+
+    @include lg {
+        border-top: none;
+        padding-top: 0;
+        margin-top: 0;
+        max-width: 100%;
+    }
+
+    @include xs {
+        display: block;
+        text-align: center;
+    }
+
+    .info-title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        color: $black-color;
+    }
+}
+
+.contact-form-wrapper {
+    position: relative;
+    background-color: #F3F3F3; 
+    overflow: hidden;  
+    padding: 40px 60px 60px 60px;
+
+    @include sm {
+        padding: 25px; 
+    }
+
+    .form-title {
+        position: relative;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 40px;
+        color: #0A0A0A;
+        margin-bottom: 30px;
+
+        @include sm {
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+    }
+}
+
+.form-title {
+    position: relative;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    color: $title-color;
+    @include xs{
+        font-size: 20px;
+        line-height: 30px; 
+    }
+
+    .shape {
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+        height: 1px;
+
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: auto;
+            margin-top: -1px;
+        }
+
+        &:before {
+            animation: sectionShape 8s linear infinite;
+            animation-delay: 0s;
+            background-color: $theme-color;
+            z-index: 9;
+            width: 160px;
+            height: 1px;
+        }
+
+        &:after {
+            width: 100%;
+            height: 1px;
+            margin: 0;
+            margin-top: -1px;
+            background-color: #121212;
+            opacity: 0.1;
+            left: 0;
+        }
+    }
+}
+
+.contact-form {
+    position: relative;
+    overflow: hidden;
+
+
+    select,
+    .form-control,
+    .form-select,
+    textarea,
+    input {
+        height: 56px;
+        padding: 0 25px 0 25px;
+        padding-left: 45px;
+        border: 1px solid transparent;
+        color: $body-color;
+        background-color: $white-color;
+        border-radius: 0;
+        font-size: 16px;
+        width: 100%;
+        font-family: $body-font;
+        transition: 0.4s ease-in-out;
+
+        &:hover,
+        &.focus {
+            color: $body-color !important;
+            border-color: $theme-color !important;
+        }
+    }
+
+    .form-group {
+        i {
+            display: inline-block;
+            position: absolute;
+            left: 35px;
+            top: 19px;
+            font-size: 16px;
+            color: $theme-color;
+            max-width: 30px;
+            z-index: 2;
+        }
+
+        .nice-select {
+            .option {
+                color: $title-color;
+
+                &.selected {
+                    color: $theme-color !important;
+                    background: $theme-color !important;
+
+                    &.focus {
+                        color: #fff !important;
+                        background: $theme-color !important;
+                    }
+                }
+
+                &:hover,
+                &.focus {
+                    background: $theme-color !important;
+                    color: #fff !important;
+                }
+            }
+
+            &.open {
+                .list {
+                    border-bottom: 3px solid $theme-color;
+                }
+            }
+        }
+    }
+
+    textarea.form-control {
+        min-height: 150px;
+        padding: 12px 25px 0 25px;
+        padding-left: 45px;
+    }
+}
+
+/* service form -----------------------------------*/
+.service-form {
+    background: $theme-color;
+    padding: 60px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.08);
+
+    &.style2 {
+        padding: 40px;
+        box-shadow: none;
+
+        @include md {
+            margin-bottom: 40px;
+        }
+
+        @include sm {
+            padding: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+            position: relative;
+
+            select,
+            .form-control,
+            .form-select,
+            textarea,
+            input {
+                height: 60px;
+                padding: 25px;
+                padding-right: 45px;
+                border: 1px solid transparent;
+                color: var(--body-color);
+                background-color: $white-color;
+                border-radius: 0;
+                font-size: 16px;
+                width: 100%;
+            }
+
+            .nice-select {
+                padding: 0 25px 0 25px;
+            }
+        }
+    }
+
+    @include xl {
+        padding: 50px;
+    }
+
+    @include xs {
+        padding: 30px;
+    }
+
+    .nice-select {
+        .option {
+            color: $title-color;
+
+            &.selected {
+                color: $theme-color !important;
+                background: $theme-color !important;
+
+                &.focus {
+                    color: #fff !important;
+                    background: $theme-color !important;
+                }
+            }
+
+            &:hover,
+            &.focus {
+                background: $theme-color !important;
+                color: #fff !important;
+            }
+        }
+
+        &.open {
+            .list {
+                border-bottom: 3px solid $theme-color;
+            }
+        }
+    }
+
+    .form-group {
+        i {
+            color: $theme-color;
+        }
+    }
+}
+
+.nice-select {
+    .option {
+        color: $title-color;
+
+        &.selected {
+            color: $theme-color !important;
+            background: $theme-color !important;
+
+            &.focus {
+                color: #fff !important;
+                background: $theme-color !important;
+            }
+        }
+
+        &:hover,
+        &.focus {
+            background: $theme-color !important;
+            color: #fff !important;
+        }
+    }
+
+    &.open {
+        .list {
+            border-bottom: 3px solid $theme-color;
+        }
+    }
+}
+
+.contact-info-wrap {
+    .title-area {
+        margin-bottom: 40px;
+
+        @include xs {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+}
+
+@include lg {
+    .contact-info {
+        &-wrap {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        margin-bottom: 0;
+    }
+}
+
+@include md {
+    .contact-info {
+        &-wrap {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+@include sm {
+    .contact-info {
+        &-wrap {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+@include xs {
+
+    .contact-info {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+
+        &_icon {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .media-body {
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    .th-social {
+        &.author-social {
+            text-align: center;
+        }
+    }
+}
+
+@include vxs {
+
+    .contact-info {
+        flex-direction: column;
+    }
+}
+
+.contact-sec {
+    position: relative;
+    margin-top: 50px;
+
+}
+
+.contact-form-wrapp {
+    margin-top: -50px;
+}
+
+.contact-form-image {
+    position: relative;
+    animation: left-right-img 4s ease-out infinite;
+
+    @include md {
+        margin-top: 80px;
+    }
+}
+
+/* team-form ------------------------*/
+.team-contact {
+    background-color: $smoke-color;
+    padding: 60px;
+
+    @include xl {
+        padding: 35px;
+    }
+}
+
+.team-form {
+    background-color: $smoke-color;
+    padding: 60px;
+
+    @include sm {
+        padding: 25px;
+    }
+
+    .form-group {
+        position: relative;
+        margin-bottom: 25px;
+
+        i {
+            left: 35px;
+            top: 20px;
+            max-width: 30px;
+            color: $theme-color;
+            z-index: 9;
+        }
+
+        textarea.form-control,
+        textarea {
+            min-height: 200px;
+            padding: 13px 20px;
+            padding-left: 45px;
+        }
+    }
+
+    select,
+    .form-control,
+    .form-select,
+    textarea,
+    input {
+        height: 60px;
+        padding-left: 45px;
+        border: 1px solid transparent;
+        color: var(--body-color);
+        background-color: $white-color;
+        border-radius: 0;
+        font-size: 16px;
+        width: 100%;
+        font-family: var(--body-font);
+        -webkit-transition: 0.4s ease-in-out;
+        transition: 0.4s ease-in-out;
+    }
+
+    .nice-select {
+        &:after {
+            border-bottom: 1px solid #787878;
+            border-right: 1px solid #787878;
+        }
+
+        .option {
+            color: $title-color;
+
+            &.selected {
+                color: $theme-color !important;
+                background: $theme-color !important;
+
+                &.focus {
+                    color: #fff !important;
+                    background: $theme-color !important;
+                }
+            }
+
+            &:hover,
+            &.focus {
+                background: $theme-color !important;
+                color: #fff !important;
+            }
+        }
+
+        &.open {
+            .list {
+                border-bottom: 3px solid $theme-color;
+            }
+        }
+    }
+}
+
+/* map form ---------------------------------- */
+.map-area {
+    position: relative;
+    margin-top: 120px;
+
+    @include sm {
+        margin-top: 0px;
+    }
+}
+
+.map-form-wrapper {
+    position: absolute;
+    top: -120px;
+    max-width: 500px;
+    background: $theme-color;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.08);
+
+    @include sm {
+        position: relative;
+        top: 0;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 80px;
+    }
+}
+
+.map-form {
+    padding: 60px;
+
+    @include xl {
+        padding: 28px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+}

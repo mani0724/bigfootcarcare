@@ -1,0 +1,15 @@
+.hero-indicator3 {
+    left: auto;
+    right: 150px; 
+    @media(max-width: 1899px) {  
+        right: 50px;
+    }
+}
+.hero-3 {
+    .th-hero-img {
+        margin: 142px 30px 0 -50%;  
+        @include md{
+            margin: 0; 
+        }
+    }
+}

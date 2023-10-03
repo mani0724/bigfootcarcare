@@ -1,0 +1,101 @@
+.team-box {
+    --space: 40px;
+
+    .team-img {
+        position: relative;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            transition: 0.4s ease-in-out;
+        }
+    }
+
+    .team-content {
+        background-color: $white-color;
+        position: absolute;
+        bottom: 0;
+        left: var(--space);
+        width: calc(100% - var(--space)*2);
+        text-align: center;
+        padding: 30px 15px 30px 15px;
+    }
+
+    .team-title {
+        font-size: 24px;
+        margin-bottom: 0;
+        margin-top: -0.24em;
+
+        a {
+            color: inherit;
+
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+
+    .team-desig {
+        color: $theme-color;
+        display: block;
+        font-family: $title-font;
+        margin-bottom: -0.5em;
+    }
+
+    .th-social {
+        background-color: $title-color;
+        border-top: 1px solid #F0F0F0;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+        padding: 30px 15px 30px 15px;
+        text-align: center;
+        width: calc(100% - var(--space)*2);
+        margin-left: var(--space);
+        position: relative;
+        z-index: 2;
+
+        &::before {
+            content: "";
+            @include equal-size(100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $white-color;
+            z-index: -1;
+            transition: 0.4s ease-in-out;
+        }
+
+        a {
+            border-radius: 50%;
+        }
+    }
+
+    &:hover {
+        .team-img {
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        .th-social {
+            &:before {
+                height: 0;
+            }
+
+            a {
+                background-color: #252934;
+                color: $white-color;
+
+                &:hover {
+                    background-color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+
+@include lg {
+    .team-box {
+        --space: 20px; 
+    }
+}

@@ -1,0 +1,422 @@
+.service-block {
+    --space-x: 40px;
+    --space-y: 40px;
+
+    &_img {
+        max-width: calc(100% - var(--space-x)*2);
+        margin-left: var(--space-x);
+        margin-bottom: -125px;
+        overflow: hidden;
+        position: relative;
+        z-index: 3;
+
+        img {
+            width: 100%;
+            transition: 0.4s ease-in-out;
+        }
+    }
+
+    &_content {
+        background-color: $title-color;
+        padding: calc(var(--space-y) + 125px) var(--space-x) var(--space-y) var(--space-x);
+        position: relative;
+        z-index: 2;
+
+        &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: #f6f6f6;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: 0.4s ease-in-out;
+        }
+    }
+
+    &_number {
+        color: $theme-color;
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-top: -0.45em;
+        margin-bottom: 5px;
+    }
+
+    &_title {
+        font-size: 24px;
+        margin-bottom: 30px;
+
+        a {
+            color: inherit;
+
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+
+    .th-btn {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 10px 20px;
+        background-color: $white-color;
+        color: $theme-color;
+
+        &:before,
+        &:after {
+            background-color: $theme-color;
+        }
+
+        &:after {
+            background-color: $theme-color;
+        }
+
+        &:hover {
+            color: $white-color;
+        }
+    }
+
+    &:hover {
+        .service-block {
+            &_img {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+
+            &_content {
+                &:before {
+                    height: 0;
+                }
+            }
+
+            &_title {
+                color: $white-color;
+            }
+
+            &_number {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@include lg {
+    .service-block {
+        --space-x: 30px;
+        --space-y: 30px;
+    }
+}
+
+@include sm {
+    .service-block {
+        --space-x: 40px;
+        --space-y: 40px;
+    }
+}
+
+@include vxs {
+    .service-block {
+        --space-x: 30px;
+        --space-y: 30px;
+    }
+}
+
+
+/* Service 3 ---------------------------------- */
+.service-item-2 {
+    background-color: $smoke-color;
+    position: relative;
+
+    &_img {
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+
+        img {
+            width: 100%;
+            transition: 0.4s ease;
+        }
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-style: solid;
+            border-width: 90px 0 0 260px;
+            border-color: transparent transparent transparent $theme-color;
+            opacity: 0.5;
+            transition: 0.5s ease;
+            z-index: 1;
+        }
+
+        &:after {
+            border-width: 108px 0 0 315px;
+            opacity: 0.4;
+            transition-delay: 0.1s;
+        }
+    }
+
+    &_content {
+        background-color: $white-color;
+        padding: 40px;
+    }
+
+    &_text {
+        margin-bottom: 20px;
+    }
+
+    .th-btn {
+        background-color: transparent;
+        border: 2px solid #f1f1f1;
+        color: $title-color;
+        padding: 20px 34.5px;
+
+        &:before {
+            background-color: transparent;
+            border: 2px solid transparent;
+        }
+
+        &:hover {
+            color: $white-color;
+            border-color: transparent;
+
+
+            &:before {
+                background-color: $theme-color;
+            }
+        }
+    }
+
+    &_title {
+        font-size: 24px;
+        margin-top: -0.26em;
+        margin-bottom: 10px;
+
+        a {
+            color: inherit;
+
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+
+    &:hover {
+        .service-item-2 {
+            &_img {
+                img {
+                    transform: scale(1.1);
+                }
+
+                &:before {
+                    border-width: 0 0 0 260px;
+                }
+
+                &:after {
+                    border-width: 0 0 0 315px;
+                }
+            }
+        }
+    }
+}
+
+@include vxs {
+    .service-item-2 {
+        &_content {
+            padding: 40px 20px;
+        }
+    }
+}
+
+
+/* Feature 4 / Quality ---------------------------------- */
+
+.quality-card {
+    position: relative;
+    z-index: 5;
+    background-color: $white-color;
+    padding: 100px 100px 110px 100px;
+    max-width: 730px;
+
+    .sec-title {
+        font-size: 40px;
+        line-height: 50px;
+
+        @include lg {
+            font-size: 36px;
+            line-height: 46px;
+        }
+
+        @include sm {
+            font-size: 30px;
+            line-height: 40px;
+        }
+    }
+}
+
+.quality-feature {
+    &-wrap {
+        display: flex;
+        column-gap: 60px;
+        row-gap: 40px;
+        margin-bottom: 50px;
+    }
+
+    &_icon {
+        margin-bottom: 30px;
+
+        img {
+            transition: 0.4s ease-in-out;
+        }
+
+    }
+
+    &_title {
+        font-size: 20px;
+        margin-bottom: 10px;
+        margin-top: -0.36em;
+    }
+
+    &_text {
+        margin-bottom: -0.5em;
+    }
+
+    &:hover {
+        .quality-feature {
+            &_icon {
+                img {
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+    }
+}
+
+.skill-feature {
+    margin-bottom: 45px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &_title,
+    .progress-value {
+        font-size: 20px;
+        margin-bottom: 12px;
+        margin-top: -0.36em;
+
+        &.style2 {
+            font-size: 16px; 
+            margin-bottom: 8px; 
+        }
+    }
+
+    .progress {
+        position: relative;
+        height: 8px;
+        background-color: transparent;
+        overflow: visible;
+    }
+
+    // .progress-bar {
+    //     background-color: $theme-color;
+    // }
+    .progress-value {
+        font-family: $title-font;
+        color: $title-color;
+        font-weight: bold;
+        margin-bottom: 0;
+        position: absolute;
+        top: -31px;
+        right: 0;
+    }
+
+    &.style2 {
+
+        .skill-feature_title,
+        .progress-value {
+            font-family: $body-font;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .progress-value {
+            top: -34px;
+        }
+    }
+
+    &.style4 {
+        .progress {
+            &:after {
+                content: "";
+                height: 2px;
+                width: 100%;
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                background-color: #F1F1F1;
+            }
+        }
+
+        .progress-content-outter {
+            position: relative;
+            height: 8px;
+            background-color: transparent;
+            margin-bottom: 3px;
+
+        }
+
+        .progress-bar {
+            position: relative;
+            padding-bottom: 10px;
+
+            &:after {
+                content: "";
+                height: 2px;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: #F1F1F1;
+            }
+        }
+    }
+}
+
+@include md {
+    .quality-card {
+        padding: 80px 50px 90px 50px;
+    }
+}
+
+@include xs {
+    .quality-card {
+        padding: 60px 15px 70px 15px;
+    }
+
+    .quality-feature {
+        text-align: center;
+
+        &-wrap {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &_icon {
+            margin-bottom: 20px;
+        }
+
+        &_text {
+            max-width: 270px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

@@ -1,0 +1,248 @@
+.checklist {
+    &.style1 {
+        border-right: 2px solid $gray-color;
+
+        @include md {
+            border-right: 2px solid transparent;
+            margin-bottom: 30px;
+        }
+    }
+
+    &.style2 {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 35px;
+
+            @include sm {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        li {
+            color: #74787C;
+
+            &:before {
+                font-weight: 500;
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &.style3 {
+        border-top: 1px solid $border-color;
+        padding-top: 25px;
+        margin-top: 40px;
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0 80px;
+
+            @include xl {
+                gap: 0 15px;
+            }
+
+            @include sm {
+                gap: 0 40px;
+            }
+
+            @include xs {
+                display: block;
+            }
+
+
+            li {
+                margin-bottom: 0;
+
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    ul {
+        padding-left: 0;
+        list-style: none;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    li {
+        color: var(--title-color);
+        margin-bottom: 10px;
+        font-weight: 500;
+        position: relative;
+        padding-left: 28px;
+
+        &:before {
+            content: "\f058";
+            font-family: var(--icon-font);
+            font-weight: 900;
+            color: var(--theme-color);
+            position: absolute;
+            left: 0;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+        }
+    }
+
+    // &.style2 {
+    //     li {
+    //         &:before {
+    //             content: "\f00c";
+    //         }
+    //     }
+    // }
+
+    &.mb-40 {
+        @include lg {
+            margin-bottom: 32px;
+        }
+    }
+
+    &.mb-45 {
+        @include lg {
+            margin-bottom: 35px;
+        }
+    }
+}
+
+.bg-img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.th-video {
+    position: relative;
+    border-radius: 5px;
+
+    img {
+        border-radius: inherit;
+    }
+
+    .play-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        >i {
+            background-color: $theme-color;
+            color: $white-color;
+        }
+    }
+}
+
+.icon-box {
+    display: inline-flex;
+    gap: 10px;
+
+    &.style2 {
+        .slick-arrow {
+            background-color: $title-color;
+            border: 1px solid $title-color;
+            color: $white-color;
+
+            &:hover {
+                background-color: $theme-color;
+                border-color: $theme-color;
+                color: $white-color;
+            }
+        }
+
+        @include md {
+            margin-bottom: 30px;
+        }
+    }
+
+    &.style3 {
+        @include md {
+            margin-bottom: 30px;
+        }
+
+        .slick-arrow {
+            background-color: transparent;
+            color: $theme-color;
+            border: 1px solid $theme-color;
+
+            &:hover {
+                background-color: $theme-color;
+                color: $white-color;
+                border-color: $theme-color;
+            }
+        }
+    }
+
+    &.style5 { 
+        @include md {
+            margin-bottom: 30px;
+        }
+    }
+
+}
+
+
+.btn-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px 30px;
+}
+
+.video-btn {
+    display: flex;
+    align-items: center;
+    color: $body-color;
+    text-transform: uppercase;
+    line-height: 1.6;
+
+    .play-btn {
+        --icon-size: 50px;
+        margin-right: 15px;
+
+        >i {
+            background-color: $theme-color;
+            color: $white-color;
+            padding-right: 0.1em;
+        }
+
+        &:before {
+            background-color: $theme-color;
+        }
+    }
+
+    .small-text {
+        font-size: 10px;
+        text-decoration: underline;
+        display: block;
+    }
+
+    .big-text {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+@include lg {
+    p {
+        &.mb-40 {
+            margin-bottom: 35px;
+        }
+
+        &.mb-45 {
+            margin-bottom: 38px;
+        }
+    }
+}

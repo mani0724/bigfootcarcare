@@ -1,0 +1,474 @@
+/* Tab Menu 1 ---------------------------------- */
+.tab-menu1 {  
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 1px;
+
+    .tab-btn {
+        font-size: 20px;
+        color: $title-color;
+        font-weight: 600;
+        border: none;
+        background-color: transparent;
+        padding: 27px 40px;
+        margin-bottom: -1px;
+        width: 100%;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;  
+            top: 0;
+            left: 0;
+            @include equal-size(100%);
+            border: 1px solid #eeeeee;
+            z-index: -1;
+        }
+
+        i {
+            margin-left: auto;
+            color: $body-color;
+        }
+
+        &:hover {
+            color: $theme-color;
+        }
+
+        &.active {  
+            color: $white-color;
+
+            &:before {
+                border-color: $theme-color;
+            }
+
+            i {
+                color: $white-color;
+            }
+        }
+    }
+
+    .indicator {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include equal-size(100%);
+        transition: 0.4s ease-in-out;
+        background-color: $theme-color;
+        z-index: -1;
+    }
+}
+
+@include lg {
+    .tab-menu1 {
+        .tab-btn {
+            font-size: 18px;
+            padding: 17px 20px;
+        }
+    }
+}
+
+@include md {
+    .tab-menu1 {
+        margin-bottom: 40px;
+
+        .tab-btn {
+            width: 50%;
+            margin-right: -1px;
+        }
+    }
+}
+
+@include sm {
+    .tab-menu1 {
+        .tab-btn {
+            font-size: 16px;
+            padding: 15px 15px;
+        }
+    }
+}
+
+@include xs {
+    .tab-menu1 {
+        .tab-btn {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+}
+
+
+/* Tab Menu 2 ---------------------------------- */ 
+.tab-menu2 {
+    &-wrap {
+        overflow: hidden;
+    }
+    --btn-space: 38px;
+    justify-content: flex-end;
+    background-color: $theme-color;
+    row-gap: 15px;
+    padding: 34px 0;
+    margin: 0 calc(var(--btn-space) * -1);
+    position: relative;
+    z-index: 2;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -85px;
+        background-color: $theme-color;
+        height: 100%;
+        width: 9999px;
+        z-index: -1;
+        clip-path: polygon(70px 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    .project-count {
+        display: block;
+        color: #FF969F;
+        margin-top: 8px;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: capitalize;
+        transition: 0.4s;
+    }
+    .indicator {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        transition: 0.4s ease-in-out;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -34px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-style: solid;
+            border-width: 0 10px 10px 10px;
+            border-color: transparent transparent $title-color transparent;
+            z-index: 3;
+        }
+    }
+    .tab-btn {
+        color: $white-color;
+        background-color: $theme-color;
+        border: none;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: left;
+        padding: 0 var(--btn-space);
+        line-height: 1;
+        border-right: 1px solid #FA4353;
+        &:last-of-type {
+            border-right: none;
+        }
+        &.active {
+            .project-count {
+                color: $white-color;
+            }
+        }
+    }
+}
+
+@include md {
+    .tab-menu2 {
+        --btn-space: 25px;
+        .tab-btn {
+            font-size: 16px;
+        }
+    }
+}
+
+@include sm {
+    .tab-menu2 {
+        --btn-space: 15px;
+        padding: 25px 0;
+        &:before {
+            left: -55px;
+            clip-path: polygon(50px 0, 100% 0%, 100% 100%, 0% 100%);
+        }
+        .tab-btn {
+            font-size: 14px;
+        }
+        .project-count {
+            margin-top: 6px;
+            font-size: 14px;
+        }
+        .indicator:after {
+            bottom: -25px;
+        }
+    }
+}
+
+@include sm {
+    .tab-menu2 {
+        flex-wrap: wrap;
+        justify-content: center;
+        .tab-btn {
+            border-right: none;
+        }
+        .indicator:after {
+            bottom: 8px;
+            left: 5px;
+            transform: translateX(0);
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent $title-color;
+        }
+    }
+}
+
+/* Tab Menu 1 ---------------------------------- */ 
+.tab-menu3 {
+    margin-bottom: 60px;
+    justify-content: center;
+    gap: 20px;
+    .th-btn {
+        background-color: $smoke-color;
+        color: $title-color;
+        &.active,
+        &:hover {
+            background-color: $theme-color;
+            color: $white-color;
+        }
+        &:before {
+            background-color: $theme-color;
+        }
+    }
+}
+
+@include lg {
+    .tab-menu3 {
+        margin-bottom: 40px;
+    }
+}
+.request-quote-wrapper { 
+    margin-right: -200px;
+    position: relative;
+    z-index: 9;
+
+    @include md {
+        margin-right: 0;
+    }
+
+
+    &.style2 {
+        margin-right: 0;
+        background-color: var(--smoke-color);
+
+        .request-wrapper {
+            background-color: transparent;
+        }
+
+        .tab-content {
+            @include md {
+                margin-right: 0;
+            }
+        }
+    }
+
+}
+
+// .tab-content {
+//     @include md {
+//         margin-right: 7px;
+//     }
+// }
+
+.request-quote-tabs {
+    display: flex;
+    align-items: center;
+
+    @media(max-width: 440px) {
+        display: block;
+    }
+
+    &.style2 {
+        justify-content: flex-start;
+
+
+        &.nav-tabs {
+            border: 1px solid #F4F4F4;
+            // &:last-child{
+            //     border-right: 1px solid transparent !important;
+            // }
+        }
+
+        .nav-link {
+            border-right: 1px solid #F4F4F4;
+            background-color: $white-color;
+            color: $title-color;
+            width: 429px;
+
+            @media(max-width: 1399px) {
+                width: 416px;
+            }
+
+            @include xl {
+                width: 371px;
+            }
+
+            @include lg {
+                width: 311px;
+            }
+
+            @include md {
+                width: 231px;
+                // width: 171px; 
+            }
+
+            @include sm {
+                width: 171px;
+            }
+
+            @include xs {
+                width: 100%;
+            }
+
+            @media(max-width: 460px) {
+                width: 100%;
+            }
+
+            &:hover,
+            &.active {
+                background-color: $smoke-color;
+                color: $title-color;
+            }
+        }
+    }
+
+    &.style3 {
+        justify-content: flex-start;
+        border: 1px solid #F4F4F4;
+        margin-right: 0;
+
+        @include xs {
+            margin-right: -4px;
+        }
+
+        @media(max-width: 460px) {
+            margin-right: 0px;
+        }
+
+        .tab-content {
+            margin-right: 0;
+
+            @include md {
+                margin-right: 0;
+            }
+        }
+
+
+        .nav-link {
+            width: 280px;
+
+            @media(max-width: 1399px) {
+                width: 271px;
+            }
+
+            @include xl {
+                width: 241px;
+            }
+
+            @include lg {
+                width: 201px;
+            }
+
+            @include md {
+                width: 228px;
+            }
+
+            @include sm {
+                width: 168px;
+            }
+
+            @include xs {
+                width: 33%;
+            }
+
+            @media(max-width: 460px) {
+                width: 100%;
+                border-right: none !important;
+            }
+
+            &:last-child {
+                border-right: 1px solid transparent !important;
+            }
+
+            &:hover,
+            &.active {
+                background-color: $theme-color;
+                color: $white-color;
+            }
+        }
+    }
+
+    &.nav-tabs {
+        border-bottom: 1px solid transparent;
+    }
+
+    .nav-link {
+        background-color: $white-color;
+        padding: 20px 40px;
+        width: 277.6px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 26px;
+        border: none;
+        border-right: 1px solid #1212121a !important;
+        text-align: center;
+        border-radius: 0;
+        color: $title-color;
+        transition: all 0.4s ease-in-out;
+
+        @media(max-width: 1399px) {
+            width: 271px;
+        }
+
+        @include xl {
+            width: 248.6px;
+        }
+
+        @include lg {
+            padding: 20px;
+            width: 218.5px;
+        }
+
+        @include md {
+            width: 33%;
+        }
+
+        @include xs {
+            width: 100%;
+        }
+
+        @include sm {
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        @include vxs {
+            padding: 5px;
+        }
+
+        &:hover,
+        &.active {
+            background-color: $theme-color;
+            color: $white-color;
+        }
+    }
+}
+
+@include lg {
+    .filter-menu.tab-menu1 {
+        gap: 10px 30px;
+    }
+}
+
+@include sm {
+    .filter-menu.tab-menu1 {
+        gap: 10px 20px;
+    }
+}
